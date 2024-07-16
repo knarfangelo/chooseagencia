@@ -2,27 +2,44 @@ header{
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
+  background-image: url("/background-choose.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .choose-zoom{
   width: 100vw;
   height: 100vh;
+  display: flex;
   position: absolute;
-  top: 0;
   object-fit: cover;
+  z-index: 5;
+  left: -200px;
+  top: -500px;
 }
-.choose{
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
+
 .lupa{
   position: absolute;
   width: 200px;
   height: 200px;
-  border: 5px solid red;
   border-radius: 50%;
+  left: 200px;
+  top: 500px;
+  outline: 20px solid #00000088;
+  overflow: hidden;
   z-index: 15;
-  margin: 100px;
+  transform: scale(1.2);
+}
+
+app-maquina-escribir{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  z-index: 20;
+  bottom: 0;
+  box-sizing: border-box;
+  padding-right: 50px;
+  color: white;
 }
