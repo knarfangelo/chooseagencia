@@ -51,7 +51,7 @@ ul{
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  background: radial-gradient(circle, #ffffff60 0%, #00000060 100%);
+  background: radial-gradient(circle, #6b6b6ba6 0%, #000000a1 100%);
   width: 70%;
   max-width: 500px;
   height: auto;
