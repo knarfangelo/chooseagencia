@@ -5,7 +5,6 @@ import { isPlatformBrowser } from '@angular/common';
 import { SwiperOptions } from 'swiper/types';
 import { serviciosJSON } from './serviciosDB/serviciosJSON';
 import { IServicios } from './serviciosDB/IServicios';
-register();
 @Component({
   selector: 'app-servicios',
   standalone: true,
@@ -15,20 +14,21 @@ register();
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <header>
-        <swiper-container>
+        <swiper-container init=false class="swiper-servicios">
           @for (item of swiperObjects; track $index) {
             <swiper-slide>
-              <div class="style-slide">
+              <div class="slide-custom">
                 <h2>{{item.title}}</h2>
                 <h4>{{item.subtitle}}</h4>
-                <button>Más info</button>
+                <button class="button-slide">Más info</button>
                 <img [src]="item.img" alt="">
               </div>
-             
             </swiper-slide>
-
           }
+
         </swiper-container>
+        <button class="swiper-button-next"> > </button>
+        <button class="swiper-button-prev"> < </button>
     </header>
   `,
   styleUrl: './servicios.component.css',
@@ -44,16 +44,17 @@ export class ServiciosComponent implements OnInit {
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-    const swiperElemConstructor = document.querySelector('swiper-container');
+    register();
+    const swiperElemConstructor = document.querySelector('.swiper-servicios');
     const swiperOptions: SwiperOptions = {
+      pagination:true,
       navigation:{
         enabled:true,
         nextEl:'.swiper-button-next',
         prevEl:'.swiper-button-prev',
       },
-      slidesPerView: 'auto',
-      speed: 3000,
       loop:true,
+      speed: 1000,
       spaceBetween:50,
       breakpoints: {
         0:{

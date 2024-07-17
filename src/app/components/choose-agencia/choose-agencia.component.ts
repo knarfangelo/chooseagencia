@@ -15,14 +15,10 @@ import { ServiciosComponent } from "../servicios/servicios.component";
     ServiciosComponent
 ],
   template: `
-
-      <app-inicio></app-inicio>
     <app-navegacion></app-navegacion>
-
+    <app-inicio></app-inicio>
     <app-nosotros></app-nosotros>
     <app-servicios></app-servicios>
-
-
   `,
   styleUrls: ['./choose-agencia.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
