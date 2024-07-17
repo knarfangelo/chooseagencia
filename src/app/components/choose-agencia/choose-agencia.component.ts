@@ -15,10 +15,11 @@ import { ServiciosComponent } from "../servicios/servicios.component";
     ServiciosComponent
 ],
   template: `
-    <app-navegacion></app-navegacion>
-    <app-inicio></app-inicio>
+
 <!-- 
-  
+      <app-inicio></app-inicio>
+    <app-navegacion></app-navegacion>
+
     <app-nosotros></app-nosotros>
     <app-servicios></app-servicios>
 
