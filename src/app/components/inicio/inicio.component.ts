@@ -15,8 +15,10 @@ import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.co
   <header (mousemove)="actualizarPosicionLupa($event)" (mouseleave)="ocultarLupa()">
     <div class="lupa" [hidden]="lupaHidden" [ngStyle]="{ left: lupaLeft + 'px', top: lupaTop + 'px' }">
       <img class="choose-zoom"   [ngStyle]="{ left: -lupaLeft + 'px', top: -lupaTop + 'px' }" src="background-choose-zoom.jpg" alt="">
-    </div>      
+    </div> 
+ 
     <app-maquina-escribir></app-maquina-escribir>
+     
   </header>
 
   `,

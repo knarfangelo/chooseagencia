@@ -17,8 +17,14 @@ import { ServiciosComponent } from "../servicios/servicios.component";
   template: `
     <app-navegacion></app-navegacion>
     <app-inicio></app-inicio>
+<!-- 
+  
     <app-nosotros></app-nosotros>
     <app-servicios></app-servicios>
+
+
+-->
+
   `,
   styleUrl: './choose-agencia.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, ChangeDetectionStrategy, OnInit, OnDestroy, Inject, PLATFORM_ID, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, OnDestroy, Inject, PLATFORM_ID, ChangeDetectorRef, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-maquina-escribir',
@@ -11,7 +11,7 @@ import { Component, ChangeDetectionStrategy, OnInit, OnDestroy, Inject, PLATFORM
   <div class="container">
     <p> > {{ tituloActual }} </p></div>
   `,
-  styleUrls: ['./maquina-escribir.component.css'],  // Asegúrate de usar 'styleUrls' en plural
+  styleUrls: ['./maquina-escribir.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MaquinaEscribirComponent implements OnInit, OnDestroy {
@@ -24,13 +24,16 @@ export class MaquinaEscribirComponent implements OnInit, OnDestroy {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private ngZone: NgZone
   ) { }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       console.log('Este mensaje solo se verá en el navegador');
-      this.iniciarMaquinaDeEscribir();
+      this.ngZone.runOutsideAngular(() => {
+        this.iniciarMaquinaDeEscribir();
+      });
     }
   }
 
@@ -44,40 +47,47 @@ export class MaquinaEscribirComponent implements OnInit, OnDestroy {
   }
 
   iniciarMaquinaDeEscribir() {
-    this.tituloActual = ''; // Reiniciar el título actual
-    this.indexCaracter = 0; // Reiniciar el índice del caracter
+    this.tituloActual = '';
+    this.indexCaracter = 0;
 
-    // Simular la escritura del título actual
     const titulo = this.titulos[this.indiceTituloActual];
     this.intervaloEscribir = setInterval(() => {
       if (this.indexCaracter < titulo.length) {
-        this.tituloActual += titulo[this.indexCaracter];
-        this.indexCaracter++;
-        this.cdr.markForCheck();  // Marca el cambio para que la vista se actualice
+        this.ngZone.run(() => {
+          this.tituloActual += titulo[this.indexCaracter];
+          this.indexCaracter++;
+          this.cdr.markForCheck();
+        });
       } else {
         clearInterval(this.intervaloEscribir);
         setTimeout(() => {
-          this.borrarTitulo();
-        }, 1500); // Tiempo de espera antes de borrar (en milisegundos)
+          this.ngZone.run(() => {
+            this.borrarTitulo();
+          });
+        }, 1500);
       }
-    }, 50); // Velocidad de escritura (en milisegundos por letra)
+    }, 50);
   }
 
   borrarTitulo() {
     this.intervaloBorrar = setInterval(() => {
       if (this.tituloActual.length > 0) {
-        this.tituloActual = this.tituloActual.slice(0, -1); // Eliminar la última letra
-        this.cdr.markForCheck();  // Marca el cambio para que la vista se actualice
+        this.ngZone.run(() => {
+          this.tituloActual = this.tituloActual.slice(0, -1);
+          this.cdr.markForCheck();
+        });
       } else {
         clearInterval(this.intervaloBorrar);
         this.indiceTituloActual++;
         if (this.indiceTituloActual === this.titulos.length) {
-          this.indiceTituloActual = 0; // Reiniciar el ciclo
+          this.indiceTituloActual = 0;
         }
         setTimeout(() => {
-          this.iniciarMaquinaDeEscribir();
-        }, 500); // Tiempo de espera antes de iniciar el próximo título (en milisegundos)
+          this.ngZone.run(() => {
+            this.iniciarMaquinaDeEscribir();
+          });
+        }, 500);
       }
-    }, 40); // Velocidad de borrado (en milisegundos por letra)
+    }, 40);
   }
 }
