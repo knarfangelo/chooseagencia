@@ -16,7 +16,6 @@ import { ServiciosComponent } from "../servicios/servicios.component";
 ],
   template: `
 
-<!-- 
       <app-inicio></app-inicio>
     <app-navegacion></app-navegacion>
 
@@ -24,10 +23,8 @@ import { ServiciosComponent } from "../servicios/servicios.component";
     <app-servicios></app-servicios>
 
 
--->
-
   `,
-  styleUrl: './choose-agencia.component.css',
+  styleUrls: ['./choose-agencia.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChooseAgenciaComponent { 

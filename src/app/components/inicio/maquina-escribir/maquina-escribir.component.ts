@@ -1,5 +1,5 @@
-import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, ChangeDetectionStrategy, OnInit, OnDestroy, Inject, PLATFORM_ID, ChangeDetectorRef, NgZone } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
   selector: 'app-maquina-escribir',
@@ -9,12 +9,13 @@ import { Component, ChangeDetectionStrategy, OnInit, OnDestroy, Inject, PLATFORM
   ],
   template: `
   <div class="container">
-    <p> > {{ tituloActual }} </p></div>
+    <p> > tituloActual </p></div>
   `,
   styleUrls: ['./maquina-escribir.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MaquinaEscribirComponent implements OnInit, OnDestroy {
+export class MaquinaEscribirComponent {
+  /*
   titulos: string[] = ["Web y Programacion", "Inteligencia y Social", "Branding y contenido digital", "Produccion Audiovisual", "Manejo de crisis"];
   tituloActual: string = '';
   indiceTituloActual: number = 0;
@@ -89,5 +90,5 @@ export class MaquinaEscribirComponent implements OnInit, OnDestroy {
         }, 500);
       }
     }, 40);
-  }
+  } */
 }
