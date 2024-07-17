@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, Inject, OnInit, PLATFORM_ID, signal } from '@angular/core';
 import { register, SwiperContainer } from 'swiper/element/bundle';
+import { isPlatformBrowser } from '@angular/common';
 import { SwiperOptions } from 'swiper/types';
 import { serviciosJSON } from './serviciosDB/serviciosJSON';
 import { IServicios } from './serviciosDB/IServicios';
@@ -39,7 +40,10 @@ export class ServiciosComponent implements OnInit {
   swiperElements = signal<SwiperContainer | null>(null);
   swiperObjects: IServicios[] = serviciosJSON;
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
     const swiperElemConstructor = document.querySelector('swiper-container');
     const swiperOptions: SwiperOptions = {
       navigation:{
@@ -66,8 +70,6 @@ export class ServiciosComponent implements OnInit {
     Object.assign(swiperElemConstructor!, swiperOptions);
     this.swiperElements.set(swiperElemConstructor as SwiperContainer);
     this.swiperElements()?.initialize();
+    }
   }
-
-
-
 }
