@@ -11,10 +11,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   <nav class="nav">
     <a class="logo" href=""><img src="logo.png"  alt="choose agencia logo"></a>
     <ul>
-      <li><a href="">Inicio</a></li>
-      <li><a href="">Nosotros</a></li>
-      <li><a href="">Servicios</a></li>
-      <li><a href="">Blog</a></li>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="">Contacto</a></li>
     </ul>
   </nav>

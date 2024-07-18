@@ -18,10 +18,10 @@ import { BlogComponent } from "../blog/blog.component";
 ],
   template: `
     <app-navegacion></app-navegacion>
-    <app-inicio></app-inicio>
-    <app-nosotros></app-nosotros>
-    <app-servicios></app-servicios>
-    <app-blog></app-blog>
+    <app-inicio id="inicio"></app-inicio>
+    <app-nosotros id="nosotros" ></app-nosotros>
+    <app-servicios id="servicios"></app-servicios>
+    <app-blog id="blog"></app-blog>
   `,
   styleUrls: ['./choose-agencia.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

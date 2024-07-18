@@ -38,7 +38,6 @@ ul{
   flex-wrap: wrap;
   position: absolute;
   bottom: 0;
-  z-index: 200;
 }
 li{
   background-color: #10132d;
