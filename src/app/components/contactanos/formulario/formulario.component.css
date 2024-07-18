@@ -1,0 +1,65 @@
+form{
+  display: grid;
+  place-items: center;
+  color: white;
+  height: 100%;
+  background-color: #0E2A52;
+  grid-template-columns: 1fr 1fr;
+}
+
+form legend{
+  grid-column: 1/3;
+  padding: 20px 50px;
+}
+form :nth-child(6){
+  grid-column: 1/3;
+}
+form :nth-child(7){
+  grid-column: 1/3;
+}
+
+form button{
+  grid-column: 1/3;
+}
+label{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px 50px;
+}
+input{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  border: 1px solid #0E2A52;
+  box-shadow: 15px 10px 1px #F7B521;
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin: 10px 0;
+}
+
+Textarea{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  border: 1px solid #0E2A52;
+  box-shadow: 10px 10px 1px #F7B521;
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin: 10px 0;
+}
+
+button{
+  border-radius: 25px;
+  width: 250px;
+  height: 40px;
+  background-color: #F7B521;
+  box-sizing: content-box;
+  border: 5px solid #F9C75E  ;
+  color: #0E2A52;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 50px;
+}

@@ -1,0 +1,31 @@
+header{
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #36302d;
+  box-sizing: border-box;
+
+}  
+
+.container{
+  display: flex;
+  border-radius: 25px;
+  border: 15px solid #F9C75E  ;
+  width: 80%;
+  height: 50%;
+}
+
+iframe{
+  width: 50%;
+  height: auto;
+  border: 1px solid red;
+}
+
+app-formulario{
+  width: 50%;
+  box-sizing: border-box;
+}
+
+

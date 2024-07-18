@@ -15,7 +15,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#blog">Blog</a></li>
-      <li><a href="">Contacto</a></li>
+      <li><a href="#contactanos">Contacto</a></li>
     </ul>
   </nav>
   `,
