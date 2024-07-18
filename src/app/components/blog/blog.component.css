@@ -55,3 +55,16 @@ button{
   cursor: pointer;
   min-width: 100px;
 }
+
+@media (width < 800px){
+
+  header {
+    flex-direction: column;
+    background-color: #0E2A52;
+    background-image: url("/blog/background-blog-responsive.jpg");
+    padding: 120px 0 ;
+  }
+  .blog-card{
+    width: 70%;
+  }
+}
