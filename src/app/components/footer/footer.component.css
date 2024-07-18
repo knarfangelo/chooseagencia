@@ -1,0 +1,45 @@
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7B521;
+}
+
+.conteiner-1, .conteiner-2, .conteiner-3{
+  flex: 1;
+  text-align: center;
+}
+
+ul{
+  list-style:none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+h1{
+  font-size: 60px;
+}
+.icons{
+  display: flex;
+}
+
+.icons li{
+  width: 50px;
+  height: 50px;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+.titulo-2{
+  font-size: 25px;
+  margin: 20px;
+}
+
+@media (max-width: 800px){
+  footer{
+    flex-direction: column;
+  }
+}

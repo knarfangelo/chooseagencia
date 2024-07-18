@@ -27,7 +27,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           <input type="text">
         </label>
         <label for="">
-          Direccion/Pais
+          Dirección/País
           <input type="text">
         </label>
         <label for="">
@@ -35,7 +35,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           <Textarea>
 
           </Textarea>
+
+                
         </label>
+          <p>
+          Dirección: C. Enrique del Horme 226, Miraflores 15047 <br>
+          Email: marketing&#64;chooseagencia.com <br>
+          Teléfono: +51 932 188 688 <br>  </p>
         <button type="submit">Enviar</button>
       </form>
   `,

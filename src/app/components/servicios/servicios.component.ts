@@ -14,6 +14,7 @@ import { IServicios } from './serviciosDB/IServicios';
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <header>
+    <video autoplay muted loop src="fondo-movimiento.mp4"></video>
         <swiper-container init=false class="swiper-servicios">
           @for (item of swiperObjects; track $index) {
             <swiper-slide>

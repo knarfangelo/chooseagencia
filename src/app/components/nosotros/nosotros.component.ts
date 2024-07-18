@@ -9,6 +9,7 @@ import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angula
   ],
   template: `
       <header>
+        <video autoplay muted loop src="fondo-movimiento.mp4"></video>
         <h1>
         EXPERTOS EN 
         <span>

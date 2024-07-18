@@ -4,7 +4,7 @@ header{
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: #36302d;
+  background-color: #000;
   box-sizing: border-box;
 
 }  
@@ -29,3 +29,19 @@ app-formulario{
 }
 
 
+
+
+@media (max-width: 800px){
+  .container{
+    flex-direction: column;
+    margin: 20px 0px;
+    width: 80%;
+  }
+  iframe{
+    width: 100%;
+    min-height: 500px;
+  }
+  app-formulario{
+    width: 100%;
+  }
+}

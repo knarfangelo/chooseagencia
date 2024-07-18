@@ -6,6 +6,7 @@ import { NosotrosComponent } from "../nosotros/nosotros.component";
 import { ServiciosComponent } from "../servicios/servicios.component";
 import { BlogComponent } from "../blog/blog.component";
 import { ContactanosComponent } from "../contactanos/contactanos.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-choose-agencia',
@@ -16,7 +17,8 @@ import { ContactanosComponent } from "../contactanos/contactanos.component";
     NosotrosComponent,
     ServiciosComponent,
     BlogComponent,
-    ContactanosComponent
+    ContactanosComponent,
+    FooterComponent
 ],
   template: `
 
@@ -26,6 +28,7 @@ import { ContactanosComponent } from "../contactanos/contactanos.component";
     <app-servicios id="servicios"></app-servicios>
     <app-blog id="blog"></app-blog>
     <app-contactanos id="contactanos"></app-contactanos>
+    <app-footer></app-footer>
   `,
   styleUrls: ['./choose-agencia.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
