@@ -44,14 +44,22 @@ li{
   padding: 5px;
   margin: 5px 4px;
 }
-button{
+a{
   border-radius: 25px;
+  text-shadow: none;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
   background-color: #F7B521;
   box-sizing: content-box;
   border: 5px solid #F9C75E  ;
   color: #0E2A52;
-  font-weight: bold;
   cursor: pointer;
+  font-weight: bold;
   min-width: 100px;
 }
 

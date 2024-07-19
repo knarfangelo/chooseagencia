@@ -5,6 +5,7 @@ import { IServicios } from '../servicios/serviciosDB/IServicios';
 import { SwiperOptions } from 'swiper/types';
 import { IBlog } from './blogDB/IBlog';
 import { blogJSON } from './blogDB/blogJSON';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -12,6 +13,7 @@ import { blogJSON } from './blogDB/blogJSON';
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     CommonModule,
+    RouterLink
   ],
   template: `
     <header>
@@ -28,7 +30,7 @@ import { blogJSON } from './blogDB/blogJSON';
           </div>
           <h3>{{item.title}}</h3>
           <p>{{item.date}}</p>
-          <button>Leer más</button>
+          <a href="https://blogchooseoficial.netlify.app/">Leer más</a>
         </div>
       }
     </header>
