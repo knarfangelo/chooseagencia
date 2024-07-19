@@ -1,5 +1,9 @@
 import { CommonModule } from '@angular/common';
+<<<<<<< HEAD
 import { ChangeDetectionStrategy, Component, Renderer2, ElementRef, ViewChild } from '@angular/core';
+=======
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+>>>>>>> 8b17cd4 (lupa testeo)
 import { NavegacionComponent } from "../navegacion/navegacion.component";
 import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.component";
 
@@ -12,7 +16,11 @@ import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.co
     MaquinaEscribirComponent
   ],
   template: `
+<<<<<<< HEAD
 <header 
+=======
+    <header 
+>>>>>>> 8b17cd4 (lupa testeo)
       (mousemove)="actualizarPosicionLupa($event)" 
       (mouseleave)="ocultarLupa()"
       (mousedown)="activarLupa($event)" 
@@ -21,8 +29,13 @@ import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.co
       (touchmove)="actualizarPosicionLupa($event)" 
       (touchend)="desactivarLupa()"
       (mouseenter)="mostrarLupa()">
+<<<<<<< HEAD
       <div #lupa class="lupa" [hidden]="lupaHidden">
         <img class="choose-zoom" src="background-choose-zoom.jpg" alt="">
+=======
+      <div class="lupa" [hidden]="lupaHidden" [ngStyle]="{ left: lupaLeft + 'px', top: lupaTop + 'px' }">
+        <img class="choose-zoom" [ngStyle]="{ left: -lupaLeft + 'px', top: -lupaTop + 'px' }" src="background-choose-zoom.jpg" alt="">
+>>>>>>> 8b17cd4 (lupa testeo)
       </div>
     
       <app-maquina-escribir></app-maquina-escribir>
@@ -32,14 +45,18 @@ import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.co
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InicioComponent { 
+<<<<<<< HEAD
   @ViewChild('lupa') lupa?: ElementRef;
 
+=======
+>>>>>>> 8b17cd4 (lupa testeo)
   lupaLeft = 200; 
   lupaTop = 500; 
   lupaWidth = 200; 
   lupaHeight = 200; 
   lupaHidden = true;
   isMouseDown = false;
+<<<<<<< HEAD
   isMobile = false; // Variable para detectar dispositivos móviles
 
   constructor(private renderer: Renderer2) {
@@ -52,6 +69,16 @@ export class InicioComponent {
 
   actualizarPosicionLupa(event: MouseEvent | TouchEvent) {
     if (!this.lupaHidden && (this.isMobile || this.isMouseDown)) {
+=======
+
+  constructor() {
+    this.lupaLeft += (this.lupaWidth / 2);
+    this.lupaTop += (this.lupaHeight / 2);
+  }
+
+  actualizarPosicionLupa(event: MouseEvent | TouchEvent) {
+    if (!this.lupaHidden || this.isMouseDown) {
+>>>>>>> 8b17cd4 (lupa testeo)
       // Obtener las coordenadas del evento
       let clientX: number = 0;
       let clientY: number = 0;
@@ -64,6 +91,7 @@ export class InicioComponent {
         clientX = touch.clientX;
         clientY = touch.clientY;
       }
+<<<<<<< HEAD
 
       // Ajustar por el desplazamiento de la página
       const offsetX = this.lupaWidth / 2;
@@ -78,6 +106,16 @@ export class InicioComponent {
       this.renderer.setStyle(this.lupa?.nativeElement, 'top', `${top}px`);
       this.renderer.setStyle(this.lupa?.nativeElement.querySelector('.choose-zoom'), 'left', `${-left}px`);
       this.renderer.setStyle(this.lupa?.nativeElement.querySelector('.choose-zoom'), 'top', `${-top}px`);
+=======
+  
+      // Ajustar por el desplazamiento de la página
+      const offsetX = this.lupaWidth / 2;
+      const offsetY = this.lupaHeight / 2;
+      
+      // Obtener las coordenadas ajustadas con el scroll
+      this.lupaLeft = clientX + window.scrollX - offsetX;
+      this.lupaTop = clientY + window.scrollY - offsetY;
+>>>>>>> 8b17cd4 (lupa testeo)
     }
   }
 
@@ -85,6 +123,7 @@ export class InicioComponent {
     if (!this.isMouseDown) {
       this.lupaHidden = true;
     }
+<<<<<<< HEAD
   }
 
   mostrarLupa() {
@@ -107,3 +146,21 @@ export class InicioComponent {
     this.lupaHidden = true; // Ocultar la lupa al dejar de presionar
   }
 }
+=======
+  }
+
+  mostrarLupa() {
+    this.lupaHidden = false;
+  }
+
+  activarLupa(event: MouseEvent | TouchEvent) {
+    this.isMouseDown = true;
+    this.lupaHidden = false;
+    this.actualizarPosicionLupa(event);
+  }
+
+  desactivarLupa() {
+    this.isMouseDown = false;
+  }
+}
+>>>>>>> 8b17cd4 (lupa testeo)
