@@ -1,27 +1,29 @@
 import { IServicios } from "./IServicios";
 
-export const serviciosJSON: IServicios[] = [
+export const serviciosJSON: IServicios[] = [    
     {
         id: 0,
+        title: "DESARROLLO WEB",
+        subtitle: "Impulsa tu presencia digital con nuestras soluciones web personalizadas.",
+        description: "En Choose diseñamos páginas web y desarrollamos tiendas virtuales, creando un valor diferencial para tu marca, fusionando tus objetivos empresariales con nuestra creatividad, obteniendo una plataforma de alto impacto con una interfaz práctica e intuitiva. Descubre con nosotros un mundo de oportunidades digitales, que te brindaran mayores ventajas competitivas para tu negocio.",
+        img: "/servicios/web-programacion.jpg"
+    },    
+    {
+        id: 1,
+        title: "CREACIÓN DE CONTENIDO",
+        subtitle: "Desata el poder del storytelling con contenido creativo que emociona y vende.",
+        description: "Descubre nuestras herramientas capaces de transformar conversaciones online en información estratégica para tu negocio. Identificamos las necesidades y deseos de tus clientes en tiempo real para potenciar tu marca, mejorando su posicionamiento e incrementando su comercialización.",
+        img: "/servicios/contenido-digital.jpg"
+    },
+    {
+        id: 2,
         title: "SOCIAL LISTENING",
         subtitle: "Convierte datos en estrategia y gestiona tu audiencia online.",
         description: "Descubre nuestras herramientas capaces de transformar conversaciones online en información estratégica para tu negocio. Identificamos las necesidades y deseos de tus clientes en tiempo real para potenciar tu marca, mejorando su posicionamiento e incrementando su comercialización.",
         img: "/servicios/social-listening.jpg"
     },
-    {
-        id: 1,
-        title: "WEB Y PROGRAMACIÓN",
-        subtitle: "Impulsa tu presencia digital con nuestras soluciones web personalizadas.",
-        description: "En Choose diseñamos páginas web y desarrollamos tiendas virtuales, creando un valor diferencial para tu marca, fusionando tus objetivos empresariales con nuestra creatividad, obteniendo una plataforma de alto impacto con una interfaz práctica e intuitiva. Descubre con nosotros un mundo de oportunidades digitales, que te brindaran mayores ventajas competitivas para tu negocio.",
-        img: "/servicios/web-programacion.jpg"
-    },
-    {
-        id: 2,
-        title: "CONTENIDO DIGITAL",
-        subtitle: "Desata el poder del storytelling con contenido creativo que emociona y vende.",
-        description: "Descubre nuestras herramientas capaces de transformar conversaciones online en información estratégica para tu negocio. Identificamos las necesidades y deseos de tus clientes en tiempo real para potenciar tu marca, mejorando su posicionamiento e incrementando su comercialización.",
-        img: "/servicios/contenido-digital.jpg"
-    },
+
+
     {
         id: 3,
         title: "REGULACIÓN DE CONTENIDOS",

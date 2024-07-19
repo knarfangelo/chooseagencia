@@ -20,7 +20,7 @@ import { IServicios } from './serviciosDB/IServicios';
             <swiper-slide>
               <div class="slide-custom">
                 <h2>{{item.title}}</h2>
-                <h4>{{item.subtitle}}</h4>
+                <p>{{item.subtitle}}</p>
                 <button class="button-slide">Más info</button>
                 <img [src]="item.img" alt="">
               </div>

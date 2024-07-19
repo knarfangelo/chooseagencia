@@ -21,15 +21,16 @@ video{
   height: 150%;
   z-index: -1;
 }
-h2,h4{
+h2,p{
   text-shadow: 2px 2px 2px #000;
 }
 h2{
-  height: 80px;
+  min-height: 60px;
   margin: 0;
 }
-h4{
+p{
   padding: 0 10px;
+  font-size: 20px;
 }
 .swiper-button-next{
   position: absolute;
@@ -53,8 +54,8 @@ h4{
   width: 25px;
   height: 35px;
 }
-h4{
-  height: 100px;
+p{
+  min-height: 100px;
   margin: 0;
 }
 swiper-container{
@@ -103,4 +104,4 @@ swiper-slide{
     cursor: pointer;
   }
 
-  
+
