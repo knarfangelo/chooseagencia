@@ -1,11 +1,13 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-nosotros',
   standalone: true,
   imports: [
     CommonModule,
+    RouterLink
   ],
   template: `
       <header>
@@ -25,7 +27,7 @@ import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angula
              <iframe SameSite=none class="video" title="vimeo-player" src="https://player.vimeo.com/video/946631138?h=c21845dc9a" width="90%" frameborder="0" allowfullscreen=""></iframe>
           }
           <p>Nuestra historia en 1 minuto</p>
-          <a href="#servicios">Conoce más</a>
+          <a routerLink="/subnosotros">Conoce más</a>
         </div>
       </header>
   `,

@@ -1,0 +1,66 @@
+.bloque5 {
+  width: 100%;
+  height: 320px;
+  margin-top: 5px;
+  display: flex;
+  cursor: pointer;
+  transition: white 0.3s ease;}
+
+.bloque5In {
+  width: 50%;
+  height: 200px;
+  padding-top: 5px;
+  cursor: pointer;
+  transition: white 0.3s ease;
+  padding-left: 40px;
+  color: #0B3257;}
+
+.bloque5In h4 {
+  font-family: Fredoka;
+  font-size: 40px;
+  padding-top: 20px;
+  margin: 0px;}
+
+.bloque5In h4:hover {
+  color: #F7B521;}
+
+.bloque5In p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  color: #0B3257;}
+
+.bloque5En {
+  width: 50%;
+  height: 200px;
+  padding-top: 40px;
+  cursor: pointer;
+  transition: white 0.3s ease;
+  padding-left: 20px;
+  font-family: Fredoka;}
+.bloque5En li {
+  list-style: none;
+  display: flex;
+  font-size: 40px;
+  color: #0B3257;}
+
+.bloque5En li p {
+  margin-right: 30px;}
+.bloque5En li:hover {
+  color: #F7B521;}
+.imgnum {
+  font-size: 40px;
+  color: #F7B521;
+  margin: 0px;
+  padding: 0px;}
+
+.imgnum:hover {
+  color: #0B3257;}
+
+.imgnum1 {
+  font-size: 40px;
+  color: #0B3257;
+  margin: 0px;
+  padding: 0px;}
+
+.imgnum1:hover {
+  color: #F7B521;}

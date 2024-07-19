@@ -1,0 +1,124 @@
+.bloque3 {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.bloque3Fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background-color: #0B3257;
+  z-index: -1;
+  /* Asegura que esté detrás del contenido */
+}
+.fondo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  background-color: #0b325773;
+}
+.bloque3In {
+  width: 50%;
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 90px;
+  color: white;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  position: relative;
+  /* Para que los elementos internos respeten el apilamiento */
+  z-index: 1;
+  /* Asegura que estén delante del fondo */
+}
+
+.bloque3In h4 {
+  font-size: 30px;
+  padding-top: 15px;
+  margin: 0px;
+  font-family: Fredoka;
+}
+
+.bloque3In h4:hover {
+  color: #F7B521;
+}
+
+.bloque3In p {
+  padding: 0px;
+}
+
+.img3 {
+  text-align: center;
+  width: 30%;
+  height: 40%;
+  position: relative;
+  /* Para que los elementos internos respeten el apilamiento */
+  z-index: 1;
+  /* Asegura que estén delante del fondo */
+}
+
+.bloque3En {
+  width: 50%;
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 90px;
+  color: white;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  position: relative;
+  /* Para que los elementos internos respeten el apilamiento */
+  z-index: 1;
+  /* Asegura que estén delante del fondo */
+}
+
+.bloque3En h4 {
+  font-size: 30px;
+  padding-top: 15px;
+  margin: 0px;
+  font-family: Fredoka;
+}
+
+.bloque3En h4:hover {
+  color: #F7B521;
+}
+
+.bloque3En p {
+  padding: 0px;
+}
+
+@media (max-width: 800px) {
+  .bloque3 {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+  }
+
+  .bloque3Fondo {
+      width: 100%;
+      height: auto;
+  }
+
+  .bloque3In .bloque3En {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .img3 {
+      width: 50%;
+      /* Ajusta el ancho de la imagen según el diseño deseado */
+      height: auto;
+      margin-bottom: 20px;
+  }
+}
