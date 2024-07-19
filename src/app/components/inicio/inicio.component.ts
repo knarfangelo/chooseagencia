@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Renderer2, ElementRef, ViewChild } from '@angular/core';
 import { NavegacionComponent } from "../navegacion/navegacion.component";
 import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.component";
 
@@ -21,8 +21,8 @@ import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.co
       (touchmove)="actualizarPosicionLupa($event)" 
       (touchend)="desactivarLupa()"
       (mouseenter)="mostrarLupa()">
-      <div class="lupa" [hidden]="lupaHidden" [ngStyle]="{ left: lupaLeft + 'px', top: lupaTop + 'px' }">
-        <img class="choose-zoom" [ngStyle]="{ left: -lupaLeft + 'px', top: -lupaTop + 'px' }" src="background-choose-zoom.jpg" alt="">
+      <div #lupa class="lupa" [hidden]="lupaHidden">
+        <img class="choose-zoom" src="background-choose-zoom.jpg" alt="">
       </div>
     
       <app-maquina-escribir></app-maquina-escribir>
@@ -32,6 +32,8 @@ import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.co
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InicioComponent { 
+  @ViewChild('lupa') lupa?: ElementRef;
+
   lupaLeft = 200; 
   lupaTop = 500; 
   lupaWidth = 200; 
@@ -39,10 +41,7 @@ export class InicioComponent {
   lupaHidden = true;
   isMouseDown = false;
 
-  constructor() {
-    this.lupaLeft += (this.lupaWidth / 2);
-    this.lupaTop += (this.lupaHeight / 2);
-  }
+  constructor(private renderer: Renderer2) {}
 
   actualizarPosicionLupa(event: MouseEvent | TouchEvent) {
     if (!this.lupaHidden || this.isMouseDown) {
@@ -64,8 +63,14 @@ export class InicioComponent {
       const offsetY = this.lupaHeight / 2;
       
       // Obtener las coordenadas ajustadas con el scroll
-      this.lupaLeft = clientX + window.scrollX - offsetX;
-      this.lupaTop = clientY + window.scrollY - offsetY;
+      const left = clientX + window.scrollX - offsetX;
+      const top = clientY + window.scrollY - offsetY;
+      
+      // Actualizar la posición de la lupa usando Renderer2
+      this.renderer.setStyle(this.lupa?.nativeElement, 'left', `${left}px`);
+      this.renderer.setStyle(this.lupa?.nativeElement, 'top', `${top}px`);
+      this.renderer.setStyle(this.lupa?.nativeElement.querySelector('.choose-zoom'), 'left', `${-left}px`);
+      this.renderer.setStyle(this.lupa?.nativeElement.querySelector('.choose-zoom'), 'top', `${-top}px`);
     }
   }
 
