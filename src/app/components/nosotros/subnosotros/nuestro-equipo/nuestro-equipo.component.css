@@ -1,21 +1,27 @@
 .bloque1 {
   width: 100%;
-  height: 80px;
+  height: auto;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #0E2A52;
-  padding-top: 5px;
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding-bottom: 5px;}
+}
 .bloque1 p {
   padding-left: 5%;
   font-size: 20px;
   padding-right: 5%;
   text-align: center;
+  height: auto;
+  margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 
 .bloque2 {
   width: 100%;
   height: 535px;
+  margin-top: 15px;
   display: flex;
 }
 .bloque2En{

@@ -1,12 +1,13 @@
 
 .banner {
   width: 100%;
+  display: flex;
   height: auto;
   margin: 0px;}
 
 .bannerNosotros {
   width: 100%;
-  height: 650px;    /* object-fit: contain;*/
+  height: 500px;    /* object-fit: contain;*/
   Object-fit: cover;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -53,6 +54,8 @@ button:hover {
   background-color: #F7B521;
   color: #ffffff;}
 /* Media query para pantallas más pequeñas */
+
+
 @media (max-width: 800px) {
   .menu { width: 100%;
       height: auto;    }
