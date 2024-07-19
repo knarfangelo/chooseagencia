@@ -25,7 +25,7 @@ import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angula
              <iframe SameSite=none class="video" title="vimeo-player" src="https://player.vimeo.com/video/946631138?h=c21845dc9a" width="90%" frameborder="0" allowfullscreen=""></iframe>
           }
           <p>Nuestra historia en 1 minuto</p>
-          <button>Conoce más</button>
+          <a href="#servicios">Conoce más</a>
         </div>
       </header>
   `,

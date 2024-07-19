@@ -50,7 +50,13 @@ p{
   height: 50vh;
 }
 
-button{
+a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
   width: 250px;
   height: 40px;
   border-radius: 25px;
@@ -58,7 +64,6 @@ button{
   box-sizing: content-box;
   border: 5px solid #F9C75E  ;
   color: #0E2A52;
-  font-weight: bold;
   cursor: pointer;
 }
 
@@ -85,7 +90,7 @@ button{
     height: 30vh;
   }
   
-  button{
+  a{
     width: 150px;
     height: 30px;
   }
