@@ -6,7 +6,7 @@ header{
   justify-content: center;
   background-color: #162845;
   box-sizing: border-box;
-
+  font-size: 25px;
 }  
 
 .container{
@@ -36,6 +36,7 @@ app-formulario{
     flex-direction: column;
     margin: 20px 0px;
     width: 80%;
+    font-size: 15px;
   }
   iframe{
     width: 100%;

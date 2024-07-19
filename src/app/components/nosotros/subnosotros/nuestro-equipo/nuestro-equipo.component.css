@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0E2A52;
+  background-color: #3187AD;
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -20,8 +20,9 @@
 
 .bloque2 {
   width: 100%;
+  background-color: #0E2A52;
+  color: #ffffff;
   height: 535px;
-  margin-top: 15px;
   display: flex;
 }
 .bloque2En{
@@ -38,14 +39,12 @@
   width: 50%;
 }.bloque2In h1 {
   font-family: Fredoka;
-  color: #0B3257;
   font-size: 35px;}
 .bloque2In h1:hover {
   color: #F7B521;}
 .bloque2In p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
-  color: #0B3257;}
+  font-size: 20px;}
 .img1 {
   width: 450px;
   height: 450px;
