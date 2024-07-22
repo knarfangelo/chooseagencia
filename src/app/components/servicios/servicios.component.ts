@@ -5,11 +5,13 @@ import { isPlatformBrowser } from '@angular/common';
 import { SwiperOptions } from 'swiper/types';
 import { serviciosJSON } from './serviciosDB/serviciosJSON';
 import { IServicios } from './serviciosDB/IServicios';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-servicios',
   standalone: true,
   imports: [
     CommonModule,
+    RouterLink
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   template: `
@@ -21,7 +23,7 @@ import { IServicios } from './serviciosDB/IServicios';
               <div class="slide-custom">
                 <h2>{{item.title}}</h2>
                 <p>{{item.subtitle}}</p>
-                <button class="button-slide">Más info</button>
+                <button class="button-slide" [routerLink]="item.pagina">Más info</button>
                 <img [src]="item.img" alt="">
               </div>
             </swiper-slide>

@@ -68,7 +68,20 @@ button{
   margin: 30px;
   margin-top: 0;
 }
-
+.validator{
+  width: auto;
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #ff000070;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
 @media (max-width: 800px){
   
   form{

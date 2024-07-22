@@ -1,4 +1,3 @@
-import { identity } from "rxjs";
 
 export interface IServicios {
     id: number;
@@ -6,4 +5,5 @@ export interface IServicios {
     subtitle:string;
     img:string;
     description:string;
+    pagina:string;
 };

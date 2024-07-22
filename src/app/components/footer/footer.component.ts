@@ -13,7 +13,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <h1>CHOOSE</h1>
         <p>
         C. Enrique del Horme 226, <br>
-Miraflores 15047 <br>
+Miraflores <br>
 Lima, Perú
 <br><br>
 Teléfono: +51 932 188 688 <br>
