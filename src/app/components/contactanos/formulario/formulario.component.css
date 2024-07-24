@@ -90,7 +90,7 @@ button{
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 20%;
   color: #F7B521;
 }
 @media (max-width: 800px){

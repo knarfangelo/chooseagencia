@@ -31,7 +31,7 @@ import { ValoresComponent } from "./valores/valores.component";
     <div class="bloque4">
         <h4>Trabajemos Juntos</h4>
         <p>Hacemos realidad tus ideas con estrategias digitales inteligentes y IA</p>
-        <button>Conversemos </button>
+        <a href="#contactanos">Conversemos </a>
     </div>
     <app-footer class="footer"></app-footer>
 

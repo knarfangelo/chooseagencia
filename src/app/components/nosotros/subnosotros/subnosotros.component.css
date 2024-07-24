@@ -20,7 +20,11 @@
 }
 .bloque4 {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   height: 200px;
+  justify-content: center;
+  align-items: center;
   margin-top: 5px;
   text-align: center;
   cursor: pointer;
@@ -38,9 +42,14 @@
   font-size: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #ffffff;}
-button {
-  width: 10%;
+a {
+  width: 250px;
   height: 20%;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   border-radius: 50px;
   background-color: #ffffff;
   color: #0B3257;
@@ -50,7 +59,7 @@ button {
   cursor: pointer;
   transition: background-color 0.10s ease;}
 
-button:hover {
+a:hover {
   background-color: #F7B521;
   color: #ffffff;}
 /* Media query para pantallas más pequeñas */
