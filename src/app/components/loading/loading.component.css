@@ -2,13 +2,14 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  background-color: #10132D;
   flex-direction: column;
   align-items: center;
   position: fixed;
   z-index: 1000;
   justify-content: center;
   height: 100vh;
+  color: #F7B521;
 }
 
 .loading-dots {
@@ -21,7 +22,7 @@
   width: 10px;
   height: 10px;
   margin: 0 5px;
-  background-color: #333;
+  background-color: #F7B521;
   border-radius: 50%;
   display: inline-block;
   animation: loadingDots 1s infinite;
