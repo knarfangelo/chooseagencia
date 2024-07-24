@@ -9,10 +9,11 @@ import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.co
   imports: [
     CommonModule,
     NavegacionComponent,
-    MaquinaEscribirComponent
+    MaquinaEscribirComponent,
 ],
   template: `
   <header (mousemove)="actualizarPosicionLupa($event)" (mouseleave)="ocultarLupa()">
+    <img class="choose-background" src="/background-choose.jpg" alt="" loading="eager">
     <div class="lupa" [hidden]="lupaHidden" [ngStyle]="{ left: lupaLeft + 'px', top: lupaTop + 'px' }">
       <img class="choose-zoom"   [ngStyle]="{ left: -lupaLeft + 'px', top: -lupaTop + 'px' }" src="background-choose-zoom.jpg" alt="">
     </div> 

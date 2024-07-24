@@ -19,12 +19,12 @@ import { RouterLink } from '@angular/router';
     <video autoplay muted loop src="fondo-movimiento.mp4"></video>
         <swiper-container init=false class="swiper-servicios">
           @for (item of swiperObjects; track $index) {
-            <swiper-slide>
+            <swiper-slide class="swiper-lazy-preloader">
               <div class="slide-custom">
                 <h2>{{item.title}}</h2>
                 <p>{{item.subtitle}}</p>
                 <button class="button-slide" [routerLink]="item.pagina">Más info</button>
-                <img [src]="item.img" alt="">
+                <img [src]="item.img" alt="" loading="lazy">
               </div>
             </swiper-slide>
           }
@@ -57,6 +57,7 @@ export class ServiciosComponent implements OnInit {
         prevEl:'.swiper-button-prev',
       },
       loop:true,
+      lazyPreloaderClass: 'swiper-lazy-preloader',
       speed: 1000,
       spaceBetween:50,
       breakpoints: {
