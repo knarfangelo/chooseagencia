@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AfterViewChecked, ChangeDetectionStrategy, Component } from '@angular/core';
 import { NavegacionComponent } from '../navegacion/navegacion.component';
 import { InicioComponent } from "../inicio/inicio.component";
 import { NosotrosComponent } from "../nosotros/nosotros.component";
@@ -39,7 +39,7 @@ import { LoadingComponent } from "../loading/loading.component";
   styleUrls: ['./choose-agencia.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ChooseAgenciaComponent { 
+export class ChooseAgenciaComponent implements AfterViewChecked { 
 
   loading = true;
 
@@ -51,11 +51,15 @@ export class ChooseAgenciaComponent {
 
 
 
+
   ngOnInit() {
 
   }
 
   ngAfterViewInit() {
+  }
+  ngAfterViewChecked(): void {
     this.loading = false;
   }
+  
 }
