@@ -1,18 +1,15 @@
 
-app-nav{
-  visibility: visible;
-}
-app-nav-responsive{
-  visibility: hidden;
-}
 
+app-nav-responsive{
+  display: none;
+}
 @media (width < 800px){
 
   app-nav{
-    visibility: hidden;
+    display: none;
   }
   app-nav-responsive{
-    visibility: visible;
+    display: block;
   }
 
 }

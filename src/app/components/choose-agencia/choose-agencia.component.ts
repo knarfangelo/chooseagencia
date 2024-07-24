@@ -7,6 +7,7 @@ import { ServiciosComponent } from "../servicios/servicios.component";
 import { BlogComponent } from "../blog/blog.component";
 import { ContactanosComponent } from "../contactanos/contactanos.component";
 import { FooterComponent } from "../footer/footer.component";
+import { LoadingComponent } from "../loading/loading.component";
 
 @Component({
   selector: 'app-choose-agencia',
@@ -18,22 +19,30 @@ import { FooterComponent } from "../footer/footer.component";
     ServiciosComponent,
     BlogComponent,
     ContactanosComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingComponent
 ],
   template: `
-
-    <app-navegacion></app-navegacion>
+    @if (loading) {
+      <app-loading></app-loading>
+    } @else {
+          <app-navegacion></app-navegacion> 
+    }
     <app-inicio id="inicio"></app-inicio>
     <app-nosotros id="nosotros" ></app-nosotros>
     <app-servicios id="servicios"></app-servicios>
     <app-blog id="blog"></app-blog>
     <app-contactanos id="contactanos"></app-contactanos>
-    <app-footer></app-footer>
+    <app-footer></app-footer> 
+ 
+
   `,
   styleUrls: ['./choose-agencia.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChooseAgenciaComponent { 
+
+  loading = true;
 
   constructor() {
 
@@ -47,4 +56,7 @@ export class ChooseAgenciaComponent {
 
   }
 
+  ngAfterViewInit() {
+    this.loading = false;
+  }
 }

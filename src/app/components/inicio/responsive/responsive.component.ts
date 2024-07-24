@@ -11,4 +11,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './responsive.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ResponsiveComponent { }
+export class ResponsiveComponent { 
+  
+}

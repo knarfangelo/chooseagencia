@@ -1,0 +1,49 @@
+.text-center {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-dots span {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #333;
+  border-radius: 50%;
+  display: inline-block;
+  animation: loadingDots 1s infinite;
+}
+
+.loading-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loadingDots {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
