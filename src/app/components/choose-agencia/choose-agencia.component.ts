@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { AfterViewChecked, ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { AfterViewChecked, ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angular/core';
 import { NavegacionComponent } from '../navegacion/navegacion.component';
 import { InicioComponent } from "../inicio/inicio.component";
 import { NosotrosComponent } from "../nosotros/nosotros.component";
@@ -43,7 +43,7 @@ export class ChooseAgenciaComponent implements AfterViewChecked {
 
   loading = true;
 
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
 
 
 
@@ -59,7 +59,11 @@ export class ChooseAgenciaComponent implements AfterViewChecked {
   ngAfterViewInit() {
   }
   ngAfterViewChecked(): void {
-    this.loading = false;
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        this.loading = false;
+      }, 2000);
+    }
   }
   
 }
