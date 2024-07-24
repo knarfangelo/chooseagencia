@@ -50,3 +50,15 @@ app-maquina-escribir{
   padding-right: 50px;
   color: white;
 }
+@media (max-width: 800px) {
+
+  .choose-background{
+    display: none;
+  }
+  header{
+    background-image: url("/backgroundcelular.jpg");
+    background-size: cover;
+    background-position: center;
+    
+  }
+}
