@@ -62,7 +62,7 @@ export class ChooseAgenciaComponent implements AfterViewChecked {
     if (isPlatformBrowser(this.platformId)) {
       setTimeout(() => {
         this.loading = false;
-      }, 2000);
+      }, 1500);
     }
   }
   
