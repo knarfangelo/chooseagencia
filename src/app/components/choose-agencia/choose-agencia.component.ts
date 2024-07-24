@@ -25,9 +25,8 @@ import { LoadingComponent } from "../loading/loading.component";
   template: `
     @if (loading) {
       <app-loading></app-loading>
-    } @else {
-          <app-navegacion></app-navegacion> 
-    }
+    } 
+    <app-navegacion></app-navegacion> 
     <app-inicio id="inicio"></app-inicio>
     <app-nosotros id="nosotros" ></app-nosotros>
     <app-servicios id="servicios"></app-servicios>
