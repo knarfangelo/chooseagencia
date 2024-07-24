@@ -13,6 +13,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
     ],
   template: `
       <form [formGroup]="formContacto" (ngSubmit)="onSubmit()">
+
+      @if(!formularioEnviado){
+
+  
       <legend>Contáctanos</legend>
         <label for="name">
           Nombres
@@ -48,8 +52,11 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
           Dirección: C. Enrique del Horme 226, Miraflores <br>
           Email: marketing&#64;chooseagencia.com <br>
           Teléfono: +51 932 188 688 <br>  </p>
-        <button type="submit"> Enviar </button>
-      </form>
+        <button type="submit"> Enviar </button> }
+        @else {
+          <h2 class="titulo-envio">Gracias por contactarnos, Choose Agencia validará su solicitud.</h2>
+        }
+      </form>   
   `,
   styleUrl: './formulario.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -57,7 +64,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class FormularioComponent {
 
   private apiUrl = 'https://formsubmit.co/knarf2003angelo@gmail.com';
-
+  formularioEnviado = false;
 
   constructor(private http: HttpClient) {}
 
@@ -74,6 +81,7 @@ export class FormularioComponent {
     if (this.formContacto.valid) {
       const formData = this.formContacto.value;
       console.log('Form Submitted:', formData);
+      this.formularioEnviado=true;
     }
   }
 
