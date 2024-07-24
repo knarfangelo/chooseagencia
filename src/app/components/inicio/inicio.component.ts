@@ -48,9 +48,10 @@ export class InicioComponent {
     // Obtener las coordenadas ajustadas con el scroll
     this.lupaLeft = event.clientX + window.scrollX - offsetX;
     this.lupaTop = event.clientY + window.scrollY - offsetY;
+
   }
   
-
+  
   ocultarLupa() {
     this.lupaHidden = true;
   }

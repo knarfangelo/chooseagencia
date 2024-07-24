@@ -59,6 +59,9 @@ app-maquina-escribir{
     background-image: url("/backgroundcelular.jpg");
     background-size: cover;
     background-position: center;
-    
   }
+  .choose-zoom{
+    content: url("/backgroundzoomcelular.jpg");
+  }
+
 }
