@@ -40,7 +40,17 @@ input{
   padding: 5px 5px;
   margin: 5px 0;
 }
-
+select{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  border: 1px solid #0E2A52;
+  box-shadow: 15px 10px 1px #F7B521;
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin: 5px 0;
+}
 Textarea{
   padding: 0;
   margin: 0;

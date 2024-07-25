@@ -40,7 +40,7 @@ export const serviciosJSON: IServicios[] = [
     },
     {
         id: 4,
-        title: "ENVIOS MASIVOS",
+        title: "ENVÍOS MASIVOS",
         subtitle: "Comunícate con miles a la vez: envíos masivos rápidos y seguros.",
         description: "En el mundo digital actual, la comunicación efectiva es esencial para el éxito. Con soluciones de email marketing, puedes crear campañas personalizadas que se ajusten a tus necesidades específicas.",
         img: "/servicios/envios-masivos.jpg",

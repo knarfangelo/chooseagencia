@@ -45,8 +45,13 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
         </label>
         <label for="message">
           Consulta
-          <input type="text" id="message" formControlName="message" name="message" placeholder="Desarrollo web">
-                
+          <select name="messagge" id="message" formControlName="message">
+                <option value="Desarrollo web">Desarrollo web</option>
+                <option value="Creación de contenido">Creación de contenido</option>
+                <option value="Social listening">Social Listening</option>
+                <option value="Regulación de contenido">Regulación de contenido</option>
+                <option value="Envíos masivos">Envíos Masivos</option>
+          </select>
         </label>
           <p>
           Dirección: C. Enrique del Horme 226, Miraflores <br>
