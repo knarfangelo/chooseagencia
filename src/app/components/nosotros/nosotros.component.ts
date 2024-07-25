@@ -24,7 +24,7 @@ import { RouterLink } from '@angular/router';
         </h1>
         <div class="container-video">
           @if (isBrowser) {
-             <iframe SameSite=none class="video" title="vimeo-player" src="https://player.vimeo.com/video/946631138?h=c21845dc9a" width="90%" frameborder="0" allowfullscreen=""></iframe>
+             <iframe SameSite=none class="video" title="vimeo-player" src="https://player.vimeo.com/video/990225411?h=a0598f0e6a" width="90%" frameborder="0" allowfullscreen=""></iframe>
           }
           <p>Nuestra historia en 1 minuto</p>
           <a routerLink="/subnosotros">Conoce más</a>

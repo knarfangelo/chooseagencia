@@ -17,6 +17,8 @@ import { RouterLink } from '@angular/router';
   template: `
     <header>
     <video autoplay muted loop src="fondo-movimiento.mp4"></video>
+    <main>
+          <button class="swiper-button-prev"> < </button>
         <swiper-container init=false class="swiper-servicios">
           @for (item of swiperObjects; track $index) {
             <swiper-slide class="swiper-lazy-preloader">
@@ -28,10 +30,10 @@ import { RouterLink } from '@angular/router';
               </div>
             </swiper-slide>
           }
-
+       
         </swiper-container>
         <button class="swiper-button-next"> > </button>
-        <button class="swiper-button-prev"> < </button>
+    </main>
     </header>
   `,
   styleUrl: './servicios.component.css',
