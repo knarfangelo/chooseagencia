@@ -43,6 +43,9 @@ main{
   right: 0;
   border-radius: 50%;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .swiper-button-prev{
   position: absolute;
@@ -51,6 +54,9 @@ main{
   height: 50px;
   border-radius: 50%;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 p{
   min-height: 100px;
