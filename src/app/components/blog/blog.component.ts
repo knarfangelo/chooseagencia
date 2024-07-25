@@ -17,6 +17,7 @@ import { RouterLink } from '@angular/router';
   ],
   template: `
     <header>
+      <main>
       @for (item of items; track $index) {
         
         <div class="blog-card">
@@ -32,7 +33,7 @@ import { RouterLink } from '@angular/router';
           <p>{{item.date}}</p>
           <a href="https://blogchooseoficial.netlify.app/">Leer más</a>
         </div>
-      }
+      }</main>
     </header>
   `,
   styleUrl: './blog.component.css',

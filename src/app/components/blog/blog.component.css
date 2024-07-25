@@ -1,6 +1,7 @@
 header{
   display: flex;
   min-height: 100vh;
+  height: 100%;
   background-image: url("/blog/background-blog.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -14,17 +15,22 @@ header{
   background-color: #0e2a52c5;
   box-shadow: 2px 2px 20px #000;
   border-radius: 10px;
-  width: 25%;
-  height: auto;
+  width: 30%;
+  margin: 0 1%;
   box-sizing: border-box;
-  margin: 1%;
   padding: 10px;
   text-shadow: 1px 1px 1px #000;
-}
 
+}
+main{
+  display: flex;
+  width: 80%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 img{
   width: 100%;
-  max-height: 400px;
   object-fit: cover;
 }
 .container-img{
@@ -72,6 +78,10 @@ a{
     padding: 120px 0 ;
   }
   .blog-card{
-    width: 70%;
+    width: 100%;
+    margin: 10px 0;
+  }
+  main{
+    flex-direction: column;
   }
 }
