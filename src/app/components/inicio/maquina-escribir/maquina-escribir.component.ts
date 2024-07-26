@@ -16,7 +16,7 @@ import { Component, ChangeDetectionStrategy, PLATFORM_ID, ChangeDetectorRef, NgZ
 })
 export class MaquinaEscribirComponent {
   
-  titulos: string[] = ["Web y Programacion", "Inteligencia y Social", "Branding y contenido digital", "Produccion Audiovisual", "Manejo de crisis"];
+  titulos: string[] = ["Web y programación", "Inteligencia y social", "Branding y contenido digital", "Producción audiovisual", "Manejo de crisis"];
   tituloActual: string = '';
   indiceTituloActual: number = 0;
   indexCaracter: number = 0;

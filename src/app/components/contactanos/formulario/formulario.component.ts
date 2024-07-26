@@ -71,7 +71,7 @@ export class FormularioComponent {
   private apiUrl = 'https://formsubmit.co/knarf2003angelo@gmail.com';
   formularioEnviado = false;
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   formContacto = new FormGroup({
     name: new FormControl('', [Validators.required]),
