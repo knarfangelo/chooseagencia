@@ -31,7 +31,7 @@ import { RouterLink } from '@angular/router';
           </div>
           <h3>{{item.title}}</h3>
           <p>{{item.date}}</p>
-          <a href="https://blogchooseoficial.netlify.app/">Leer más</a>
+          <a href="https://blog.chooseagencia.com/">Leer más</a>
         </div>
       }</main>
     </header>
