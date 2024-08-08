@@ -14,7 +14,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <p>En Choose diseñamos páginas web y desarrollamos tiendas virtuales, creando un valor diferencial para tu marca, fusionando tus objetivos empresariales con nuestra creatividad, obteniendo una plataforma de alto impacto con una interfaz práctica e intuitiva. Descubre con nosotros un mundo de oportunidades digitales, que te brindaran mayores ventajas competitivas para tu negocio.</p>
     <a href="#servicios">Regresar</a>
     <a href="#contactanos">Contáctanos</a></main>
-   <iframe src="https://player.vimeo.com/video/946396742?h=cd6c28192b" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> <img src="/servicios/desarrollo-web-informacion.jpg" alt="">
+   <iframe src="https://player.vimeo.com/video/946398864?h=00ff0d2a6f" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> <img src="/servicios/desarrollo-web-informacion.jpg" alt="">
 
   </header>
   `,
