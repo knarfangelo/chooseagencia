@@ -22,7 +22,7 @@ import { RouterLink } from '@angular/router';
         
         <div class="blog-card">
           <div class="container-img">
-                      <img [src]="item.image" alt="">
+                      <img [src]="item.image" [alt]="item.title">
                       <ul>
                         @for (tag of item.etiquetas; track $index) {
                           <li>{{tag}}</li>

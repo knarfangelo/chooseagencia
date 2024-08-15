@@ -35,22 +35,22 @@ Email: marketing&#64;chooseagencia.com <br>
         <ul class="icons">
          
           <li><a href="https://www.instagram.com/chooseagencia/" target="_blank">
-            <img src="/icons/footer-instagram.svg" alt="">
+            <img src="/icons/footer-instagram.svg" alt="instagram de la agencia de marketing de choose">
           </a></li>
           <li><a href="https://www.facebook.com/ChooseAgenciaCreativa" target="_blank">
-            <img src="/icons/footer-facebook.svg" alt="">
+            <img src="/icons/footer-facebook.svg" alt="facebook de la agencia de marketing de choose">
           </a></li>
           <li><a href="https://www.youtube.com/@chooseagencia" target="_blank">
-            <img src="/icons/footer-youtube.svg" alt="">
+            <img src="/icons/footer-youtube.svg" alt="youtube de la agencia de marketing de choose">
           </a></li>
           <li><a href="https://www.tiktok.com/@chooseagencia" target="_blank">
-            <img src="/icons/footer-tiktok.svg" alt="">
+            <img src="/icons/footer-tiktok.svg" alt="tiktok de la agencia">
           </a></li>
           <li><a href="https://www.linkedin.com/in/choose-agencia-creativa/" target="_blank">
-            <img src="/icons/footer-linkedin.svg" alt="">
+            <img src="/icons/footer-linkedin.svg" alt="linkedin de la agencia de marketing de choose">
           </a></li>
           <li><a href="https://x.com/ChooseAgencia" target="_blank">
-            <img src="/icons/footer-twitter.svg" alt="">
+            <img src="/icons/footer-twitter.svg" alt="twitter de la agencia de marketing de choose">
           </a></li>
         </ul>
       </div>

@@ -26,7 +26,7 @@ import { RouterLink } from '@angular/router';
                 <h2>{{item.title}}</h2>
                 <p>{{item.subtitle}}</p>
                 <button class="button-slide" [routerLink]="item.pagina">Más info</button>
-                <img [src]="item.img" alt="" loading="lazy">
+                <img [src]="item.img" [alt]="item.title" loading="lazy">
               </div>
             </swiper-slide>
           }

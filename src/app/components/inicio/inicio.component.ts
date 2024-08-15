@@ -13,9 +13,9 @@ import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.co
 ],
   template: `
   <header (mousemove)="actualizarPosicionLupa($event)" (mouseleave)="ocultarLupa()">
-    <img class="choose-background" src="/background-choose.jpg" alt="" loading="eager">
+    <img class="choose-background" src="/background-choose.jpg" alt="fondo choose oculto" loading="eager">
     <div class="lupa" [hidden]="lupaHidden" [ngStyle]="{ left: lupaLeft + 'px', top: lupaTop + 'px' }">
-      <img class="choose-zoom"   [ngStyle]="{ left: -lupaLeft + 'px', top: -lupaTop + 'px' }" src="background-choose-zoom.jpg" alt="">
+      <img class="choose-zoom"   [ngStyle]="{ left: -lupaLeft + 'px', top: -lupaTop + 'px' }" src="background-choose-zoom.jpg" alt="fondo choose">
     </div> 
  
     <app-maquina-escribir></app-maquina-escribir>
