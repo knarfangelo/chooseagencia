@@ -1,9 +1,125 @@
-header{
+.contenido{
+  background-color: #10132d;
+  min-height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+main{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  position: relative;
+  width: 760px;
+  height: 751px;
+  border-radius: 25px;
+  background-color: red;
+}
+form{
+  width: 680px;
+  height: 751px;
+  border-radius: 10px;
+  background-color: #FFF;
+  box-sizing: border-box;
+  padding: 0 98px;
+  font-family: 'Poppins';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 65px;
+}
+input{
+  border-radius: 20px;
+  height: 61px;
+  background: rgba(176, 186, 195, 0.40);
+  border: 0;
+}
+button{
+  border-radius: 10px;
+  background: #F7B521;
+  display: flex;
+  color: #FFF;
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 179px;
+  height: 60px;
+  border: 0;
+  padding: 10px 70px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.choose{
+  position: absolute;
+  width: 90%;
   height: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+label{
+  color: #7C838A;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.fondo{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+}
+legend{
+  align-self: stretch;
+  color: #10132D;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.usuario,.contraseña{
+  display: flex;
+  flex-direction: column;
 }
 
-iframe{
-  width: 100%;
-  height: 100vh;
+.error{
+  color: #10132d;
+  text-align: center;
+}
+
+@media (width < 1000px) {
+  .container{
+    width: 100%;
+    height: 50%;
+    display: flex;
+  }
+  form{
+    width: 100%;
+    height: 500px;
+    gap: 30px;
+    padding: 0 30px;
+  }
+  main{
+    flex-direction: column-reverse;
+    width: 80%;
+  }
+
 }
