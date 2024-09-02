@@ -8,6 +8,7 @@ import { BlogComponent } from "../blog/blog.component";
 import { ContactanosComponent } from "../contactanos/contactanos.component";
 import { FooterComponent } from "../footer/footer.component";
 import { LoadingComponent } from "../loading/loading.component";
+import { VoiceflowComponentComponent } from "../VoiceflowComponent/VoiceflowComponent.component";
 
 @Component({
   selector: 'app-choose-agencia',
@@ -20,7 +21,8 @@ import { LoadingComponent } from "../loading/loading.component";
     BlogComponent,
     ContactanosComponent,
     FooterComponent,
-    LoadingComponent
+    LoadingComponent,
+    VoiceflowComponentComponent
 ],
   template: `
     @if (loading) {
@@ -33,7 +35,7 @@ import { LoadingComponent } from "../loading/loading.component";
     <app-blog id="blog"></app-blog>
     <app-contactanos id="contactanos"></app-contactanos>
     <app-footer></app-footer> 
- 
+    <app-voiceflow-component></app-voiceflow-component>
 
   `,
   styleUrls: ['./choose-agencia.component.css'],
@@ -42,28 +44,17 @@ import { LoadingComponent } from "../loading/loading.component";
 export class ChooseAgenciaComponent implements AfterViewChecked { 
 
   loading = true;
+  private botLoaded = false; // Indicador de carga
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
-
-
-  }
-
-
-
-
-  ngOnInit() {
-
-  }
-
-  ngAfterViewInit() {
-  }
   ngAfterViewChecked(): void {
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId) && !this.botLoaded) {
       setTimeout(() => {
         this.loading = false;
+        this.botLoaded = true; // Marcar como cargado
       }, 1500);
     }
   }
-  
+
 }

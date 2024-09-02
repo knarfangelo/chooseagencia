@@ -6,6 +6,7 @@ import { RegulacionContenidosComponent } from './components/servicios/regulacion
 import { EnviosMasivosComponent } from './components/servicios/envios-masivos/envios-masivos.component';
 import { DesarrolloWebComponent } from './components/servicios/desarrollo-web/desarrollo-web.component';
 import { CreacionContenidoComponent } from './components/servicios/creacion-contenido/creacion-contenido.component';
+import { ElectoralComponent } from './components/electoral/electoral.component';
 
 export const routes: Routes = [
     { path: '', component: ChooseAgenciaComponent },
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: 'regulacion-contenido', component:RegulacionContenidosComponent},
     { path: 'envios-masivos', component:EnviosMasivosComponent},
     { path: 'desarrollo-web', component:DesarrolloWebComponent},
-    { path: 'creacion-contenido', component:CreacionContenidoComponent}
+    { path: 'creacion-contenido', component:CreacionContenidoComponent},
+    { path: 'electoral', component: ElectoralComponent}
 ];

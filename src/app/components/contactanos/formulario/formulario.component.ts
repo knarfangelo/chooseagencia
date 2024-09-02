@@ -68,10 +68,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class FormularioComponent {
 
-  private apiUrl = 'https://formsubmit.co/knarf2003angelo@gmail.com';
+  private apiUrl = 'http://localhost/PHP-API/api.php';
   formularioEnviado = false;
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   formContacto = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -85,8 +85,18 @@ export class FormularioComponent {
   onSubmit() {
     if (this.formContacto.valid) {
       const formData = this.formContacto.value;
-      console.log('Form Submitted:', formData);
-      this.formularioEnviado=true;
+      this.formularioEnviado = true;
+      this.http.post(this.apiUrl, formData, {
+        headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      }).subscribe(
+        response => {
+          console.log('Form Submitted:', response);
+          this.formularioEnviado = true;
+        },
+        error => {
+          console.error('Error:', error);
+        }
+      );
     }
   }
 
