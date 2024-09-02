@@ -36,6 +36,8 @@ form{
 input{
   border-radius: 20px;
   height: 61px;
+  box-sizing: border-box;
+  padding-left: 15px;
   background: rgba(176, 186, 195, 0.40);
   border: 0;
 }
