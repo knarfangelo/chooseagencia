@@ -82,4 +82,29 @@ label:nth-child(7){
   margin-top: auto;
   margin-left: 90px;
 }
+@media (width < 800px) {
+  header{
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  h1{
+    font-size: 60px;
+  }
+  main{
+    flex-direction: column;
+  }
+  form{
+    width: 100%;
+    padding: 25px;
+  }
+  .charles{
+    margin: auto;
+    width: 100%;
+    height: auto;
 
+  }
+  label:nth-child(1),
+  label:nth-child(2){
+    grid-column: 1/3;
+  }
+}
