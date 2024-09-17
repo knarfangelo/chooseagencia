@@ -14,6 +14,24 @@ header{
   flex-direction: column;
   justify-content: end;
 }
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+.titulo-envio{
+  color: #F7B521;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/3;
+}
+.img-envio{
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin: 0 auto;
+  grid-column: 1/3;
+}
 button{
   border-radius: 25px;
   width: 250px;

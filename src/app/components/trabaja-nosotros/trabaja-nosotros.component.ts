@@ -13,61 +13,139 @@ import { error } from 'console';
     ReactiveFormsModule
   ],
   template: `
-    <header>
-    <h1>Trabaja con nosotros</h1>
-     <main>
-      <form [formGroup]="formContacto">
-        <label for=""><p>Nombres<span>*</span></p>
-          <input type="text" name="" id="" placeholder="Tus nombres" formControlName='nombres'>
-        </label>
-        <label for=""><p>Apellidos<span>*</span></p>
-          <input type="text" name="" id="" placeholder="Tus apellidos" formControlName='apellidos'>
-        </label>
-        <label for=""><p>Correo electronico<span>*</span></p>
-          <input type="text" name="" id="" placeholder="ejemplo@gmail.com" formControlName='email'>
-        </label>
-        <label for=""><p>Celular</p>
-          <input type="text" name="" id="" placeholder="952599717" formControlName='celular'>
-        </label>
-        <label for=""><p>Linkedin</p>
-          <input type="text" name="" id="" placeholder="Tu linkedin" formControlName='linkedin'>
-        </label>
-        <label class="curriculum"  for="image_uploads"><p>CV</p>
+  <header>
+  <h1>Trabaja con nosotros</h1>
+  <main>
+  
+    <form [formGroup]="formContacto" (ngSubmit)="registrar()">
+      @if (enviarSolicitud) {
+      <label for="nombres">
+        <p>Nombres<span>*</span></p>
+        <input
+          type="text"
+          id="nombres"
+          placeholder="Tus nombres"
+          formControlName="nombres"
+        />
+        <div *ngIf="formContacto.get('nombres')?.invalid && (formContacto.get('nombres')?.touched || formContacto.get('nombres')?.dirty)">
+          <p class="error">Este campo es obligatorio.</p>
+        </div>
+      </label>
+      
+      <label for="apellidos">
+        <p>Apellidos<span>*</span></p>
+        <input
+          type="text"
+          id="apellidos"
+          placeholder="Tus apellidos"
+          formControlName="apellidos"
+        />
+        <div *ngIf="formContacto.get('apellidos')?.invalid && (formContacto.get('apellidos')?.touched || formContacto.get('apellidos')?.dirty)">
+          <p class="error">Este campo es obligatorio.</p>
+        </div>
+      </label>
+      
+      <label for="email">
+        <p>Correo electrónico<span>*</span></p>
+        <input
+          type="text"
+          id="email"
+          placeholder="ejemplo@gmail.com"
+          formControlName="email"
+        />
+        <div *ngIf="formContacto.get('email')?.invalid && (formContacto.get('email')?.touched || formContacto.get('email')?.dirty)">
+          <p class="error" *ngIf="formContacto.get('email')?.errors?.['required']">Este campo es obligatorio.</p>
+          <p class="error" *ngIf="formContacto.get('email')?.errors?.['email']">Correo electrónico no válido.</p>
+        </div>
+      </label>
+      
+      <label for="celular">
+        <p>Celular</p>
+        <input
+          type="text"
+          id="celular"
+          placeholder="952599717"
+          formControlName="celular"
+        />
+        <div *ngIf="formContacto.get('celular')?.invalid && (formContacto.get('celular')?.touched || formContacto.get('celular')?.dirty)">
+          <p class="error">Este campo es obligatorio.</p>
+        </div>
+      </label>
+      
+      <label for="linkedin">
+        <p>Linkedin</p>
+        <input
+          type="text"
+          id="linkedin"
+          placeholder="Tu linkedin"
+          formControlName="linkedin"
+        />
+        <div *ngIf="formContacto.get('linkedin')?.invalid && (formContacto.get('linkedin')?.touched || formContacto.get('linkedin')?.dirty)">
+          <p class="error">Este campo es obligatorio.</p>
+        </div>
+      </label>
+      
+      <label class="curriculum" for="image_uploads">
+        <p>CV</p>
         <p class="place" #fileLabel>Sube tu CV</p>
-          <input class="archivo"  type="file" (change)="onFileChange($event)" accept=".pdf" placeholder="Adjunta tu cv" formControlName='cv'
+        <input
+          class="archivo"
+          type="file"
+          (change)="onFileChange($event)"
+          accept=".pdf"
+          placeholder="Adjunta tu cv"
+          formControlName="cv"
           id="image_uploads"
-          name="image_uploads">
-        </label>
-        <label for=""><p>Portafolio</p>
-          <input type="text" name="" id="" placeholder="Adjunta tu portafolio" formControlName='portafolio'>
-        </label>
-        <button (click)="registrar()">Enviar</button>
-      </form>
-      <img class="charles" src="trabaja-nosotros/charles.png" alt=""> </main>
-    
-    </header>
+          name="image_uploads"
+        />
+        <div *ngIf="formContacto.get('cv')?.invalid && (formContacto.get('cv')?.touched || formContacto.get('cv')?.dirty)">
+          <p class="error">Debes adjuntar un archivo PDF.</p>
+        </div>
+      </label>
+      
+      <label for="portafolio">
+        <p>Portafolio</p>
+        <input
+          type="text"
+          id="portafolio"
+          placeholder="Adjunta tu portafolio"
+          formControlName="portafolio"
+        />
+        <div *ngIf="formContacto.get('portafolio')?.invalid && (formContacto.get('portafolio')?.touched || formContacto.get('portafolio')?.dirty)">
+          <p class="error">Este campo es obligatorio.</p>
+        </div>
+      </label>
+      
+      <button type="submit" [disabled]="formContacto.invalid">Enviar</button>}
+      @else {
+        <h2 class="titulo-envio">Gracias por contactarno, Choose Agencia validará su solicitud.</h2>
+        <img class="img-envio" src="logo-responsive.png" alt="">
+      }
+    </form>
+    <img class="charles" src="trabaja-nosotros/charles.png" alt="">
+  </main>
+</header>
+
   `,
   styleUrl: './trabaja-nosotros.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TrabajaNosotrosComponent {
-  @ViewChild('fileLabel', { static: true }) fileLabel!: ElementRef;
+  @ViewChild('fileLabel', { static: false }) fileLabel!: ElementRef;
 
   formContacto: FormGroup = new FormGroup({
     nombres: new FormControl('', Validators.required),
     apellidos: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
     celular: new FormControl('', Validators.required),
-    cv: new FormControl('', Validators.required),
     linkedin: new FormControl('', Validators.required),
+    cv: new FormControl('', Validators.required),
     portafolio: new FormControl('', Validators.required),
   });
 
   selectedFile: string | null = null;
-
-  constructor(private curriculumsService: TrabajaNosotrosService){
-
-  }
+  enviarSolicitud:Boolean = true;
+  constructor(private curriculumsService: TrabajaNosotrosService) {}
 
   // Maneja el cambio de archivo y lo convierte a Blob
   onFileChange(event: Event): void {
@@ -86,34 +164,44 @@ export class TrabajaNosotrosComponent {
     } else {
       this.fileLabel.nativeElement.textContent = 'Sube tu CV'; // Restablece el texto si no hay archivo
     }
-    
   }
 
   convertToBase64(file: File) {
     const reader = new FileReader(); // Usar FileReader para leer el archivo
-    
+
     reader.readAsDataURL(file); // Leer el archivo como DataURL (Base64)
-    
+
     reader.onload = () => {
       const base64String = reader.result as string; // El archivo en Base64
-      this.selectedFile = base64String; 
+      this.selectedFile = base64String;
     };
-    
+
     reader.onerror = (error) => {
       console.error('Error al convertir el archivo a Base64:', error);
     };
   }
+
   // Envía el archivo como Blob al servidor
   registrar(): void {
-      this.formContacto.value.cv = this.selectedFile;
-      console.log(this.formContacto.value); // Muestra el FormData en la consola
-      this.curriculumsService.addCurriculum(this.formContacto.value).subscribe(
-        response => {
-          console.log('Formulario enviado:', response);
-        },
-        error  => {
-          console.error('Error:', error);
-        }
-      )
+    if (this.formContacto.invalid) {
+      // Marcar todos los campos como tocados para mostrar los mensajes de error
+      Object.keys(this.formContacto.controls).forEach(field => {
+        const control = this.formContacto.get(field);
+        control?.markAsTouched({ onlySelf: true });
+      });
+      return;
+    }
+    this.enviarSolicitud = false;
+    this.formContacto.value.cv = this.selectedFile;
+    console.log(this.formContacto.value); // Muestra el FormData en la consola
+    this.curriculumsService.addCurriculum(this.formContacto.value).subscribe(
+      response => {
+        console.log('Formulario enviado:', response);
+        this.enviarSolicitud = false;
+      },
+      error => {
+        console.error('Error:', error);
+      }
+    );
   }
 }
