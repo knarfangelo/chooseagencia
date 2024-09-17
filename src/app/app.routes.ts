@@ -7,6 +7,7 @@ import { EnviosMasivosComponent } from './components/servicios/envios-masivos/en
 import { DesarrolloWebComponent } from './components/servicios/desarrollo-web/desarrollo-web.component';
 import { CreacionContenidoComponent } from './components/servicios/creacion-contenido/creacion-contenido.component';
 import { ElectoralComponent } from './components/electoral/electoral.component';
+import { TrabajaNosotrosComponent } from './components/trabaja-nosotros/trabaja-nosotros.component';
 
 export const routes: Routes = [
     { path: '', component: ChooseAgenciaComponent },
@@ -16,5 +17,6 @@ export const routes: Routes = [
     { path: 'envios-masivos', component:EnviosMasivosComponent},
     { path: 'desarrollo-web', component:DesarrolloWebComponent},
     { path: 'creacion-contenido', component:CreacionContenidoComponent},
-    { path: 'electoral', component: ElectoralComponent}
+    { path: 'electoral', component: ElectoralComponent},
+    { path: 'trabaja-nosotros', component: TrabajaNosotrosComponent}
 ];
