@@ -26,6 +26,23 @@ button{
   cursor: pointer;
 
 }
+
+.curriculum{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+.archivo{
+  color: transparent;
+}
+input[type=file]::file-selector-button {
+  display: none;
+}
+.archivo input[type="file"] {
+  display: none;
+}
 h1{
   color: #F9C75E;
   margin: 0;
@@ -38,7 +55,13 @@ h1{
   font-weight: 700;
   line-height: normal;
 }
-
+.place{
+  position: absolute;
+  height: auto;  
+  top: 15px;
+  color: grey;
+  font-weight: 400;
+}
 main{
   display: flex;
 }
