@@ -28,7 +28,7 @@ Email: marketing&#64;chooseagencia.com <br>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#contactanos">Contacto</a></li>
-      <li><a href="#contactanos">Trabaja con nosotros</a></li>
+      <li><a href="trabaja-nosotros">Trabaja con nosotros</a></li>
         </ul>
       </div>
       <div class="conteiner-3"> 
