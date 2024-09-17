@@ -33,8 +33,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <label for=""><p>Portafolio</p>
           <input type="text" name="" id="" placeholder="Adjunta tu portafolio">
         </label>
+        <button>Enviar</button>
       </form>
       <img class="charles" src="trabaja-nosotros/charles.png" alt=""> </main>
+    
     </header>
   `,
   styleUrl: './trabaja-nosotros.component.css',
