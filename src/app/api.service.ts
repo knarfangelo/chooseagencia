@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  private apiUrl = 'http://localhost/PHP-API/api.php'; // Reemplaza con la URL de tu API PHP
+  private apiUrl = 'https://chooseagencia.com/api/api.php'; // Reemplaza con la URL de tu API PHP
 
   constructor(private http: HttpClient) {}
   // Método para obtener datos (GET)

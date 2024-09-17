@@ -68,7 +68,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class FormularioComponent {
 
-  private apiUrl = 'http://localhost/PHP-API/api.php';
+  private apiUrl = 'https://chooseagencia.com/api/api.php';
   formularioEnviado = false;
 
   constructor(private http: HttpClient) {}
