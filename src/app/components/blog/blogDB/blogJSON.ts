@@ -7,7 +7,7 @@ export const blogJSON: IBlog[] = [
         etiquetas: ["Eliminación de contenido", "Novedades"],
         link: "",
         image: "/blog/ORIGENDELALEYDELOLVIDO.png",
-        date: "junio 6, 2024"
+        date: "marzo 25, 2024"
     },
     
     {
@@ -16,7 +16,7 @@ export const blogJSON: IBlog[] = [
         etiquetas: ["Contenido digital", "Novedades", "Social listening"],
         link: "",
         image: "/blog/SOCIALLISTENINGCASOS.png",
-        date: "junio 6, 2024"
+        date: "diciembre 2, 2024"
     },
     {
         id: 2,

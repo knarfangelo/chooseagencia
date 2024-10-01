@@ -1,5 +1,7 @@
 header{
   display: flex;
+  position: relative;
+  flex-direction: column;
   min-height: 100vh;
   height: 100%;
   background-image: url("/blog/background-blog.jpg");
@@ -10,7 +12,11 @@ header{
   align-items: center;
   justify-content: center;
 }
-
+.titulo {
+  position: absolute;
+  z-index: 10;
+  top: 50px;
+}
 .blog-card{
   background-color: #0e2a52c5;
   box-shadow: 2px 2px 20px #000;

@@ -17,9 +17,9 @@ import { RouterLink } from '@angular/router';
   ],
   template: `
     <header>
+      <h1 class="titulo">Nuestro Blog</h1>
       <main>
       @for (item of items; track $index) {
-        
         <div class="blog-card">
           <div class="container-img">
                       <img [src]="item.image" [alt]="item.title">

@@ -46,7 +46,7 @@ export class ChooseAgenciaComponent implements AfterViewChecked {
   loading = true;
   private botLoaded = false; // Indicador de carga
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewChecked(): void {
     if (isPlatformBrowser(this.platformId) && !this.botLoaded) {
