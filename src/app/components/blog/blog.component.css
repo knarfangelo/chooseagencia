@@ -16,6 +16,7 @@ header{
   position: absolute;
   z-index: 10;
   top: 50px;
+  font-size: 50px;
 }
 .blog-card{
   background-color: #0e2a52c5;
