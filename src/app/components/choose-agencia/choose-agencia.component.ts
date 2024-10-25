@@ -25,9 +25,6 @@ import { VoiceflowComponentComponent } from "../VoiceflowComponent/VoiceflowComp
     VoiceflowComponentComponent
 ],
   template: `
-    @if (loading) {
-      <app-loading></app-loading>
-    } 
     <app-navegacion></app-navegacion> 
     <app-inicio id="inicio"></app-inicio>
     <app-nosotros id="nosotros" ></app-nosotros>
@@ -41,20 +38,10 @@ import { VoiceflowComponentComponent } from "../VoiceflowComponent/VoiceflowComp
   styleUrls: ['./choose-agencia.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ChooseAgenciaComponent implements AfterViewChecked { 
+export class ChooseAgenciaComponent{ 
 
   loading = true;
-  private botLoaded = false; // Indicador de carga
-
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  ngAfterViewChecked(): void {
-    if (isPlatformBrowser(this.platformId) && !this.botLoaded) {
-      setTimeout(() => {
-        this.loading = false;
-        this.botLoaded = true; // Marcar como cargado
-      }, 1500);
-    }
-  }
 
 }
