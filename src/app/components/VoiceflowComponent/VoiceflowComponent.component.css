@@ -4,3 +4,12 @@
   right: 10px;
   z-index: 1000; /* Ajusta según sea necesario */
 }
+::ng-deep .vfrc-widget--launcher {
+  bottom: 250px !important; /* Cambia la posición según tus necesidades */
+  right: 250px !important;
+}
+
+::ng-deep .vfrc-launcher {
+  background-color: #000 !important; /* Cambia el color de fondo */
+  border-radius: 50% !important;
+}

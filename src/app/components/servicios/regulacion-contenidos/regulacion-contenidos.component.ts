@@ -8,14 +8,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     CommonModule,
   ],
   template: `
-     <header>
-    <main>
+  <header>
+  <main>
     <h1>REGULACIÓN DE CONTENIDO</h1>
     <p>En un mundo donde la información es poder y la privacidad un bien preciado, el derecho al olvido se convierte en un instrumento fundamental para navegar con seguridad el océano digital.</p>
     <a href="#servicios">Regresar</a>
     <a href="#contactanos">Contáctanos</a>
   </main>
-    <iframe src="https://player.vimeo.com/video/946396742?h=cd6c28192b" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> <img src="/servicios/regulacion-contenido-informacion.jpg" alt="video de regulacion de contenidos de la agencia de marketing de choose">
+    <iframe src="https://player.vimeo.com/video/1024511206?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> <img src="/servicios/regulacion-contenido-informacion.jpg" alt="video de regulacion de contenidos de la agencia de marketing de choose">
 </header>
   `,
   styleUrl: './regulacion-contenidos.component.css',

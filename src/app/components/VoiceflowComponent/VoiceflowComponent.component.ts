@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID, AfterViewInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-voiceflow-component',
@@ -7,12 +7,15 @@ import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angula
   imports: [
     CommonModule,
   ],
-  template: `<div id="voiceflow-container"></div>`,
-  styleUrl: './VoiceflowComponent.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+  <div class="bot">
+  <div id="voiceflow-container"></div></div>`,
+  styleUrls: ['./VoiceflowComponent.component.css'],
 })
-export class VoiceflowComponentComponent { 
+export class VoiceflowComponentComponent implements AfterViewInit {
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
       const script = document.createElement('script');
@@ -26,6 +29,9 @@ export class VoiceflowComponentComponent {
         });
       };
       document.getElementById('voiceflow-container')?.appendChild(script);
+   
+        
     }
   }
+
 }
