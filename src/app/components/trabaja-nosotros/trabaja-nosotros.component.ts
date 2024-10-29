@@ -4,16 +4,23 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { TrabajaNosotrosService } from '../../trabajaNosotros.service';
 import { response } from 'express';
 import { error } from 'console';
+import { NavegacionComponent } from "../navegacion/navegacion.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-trabaja-nosotros',
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    NavegacionComponent,
+    FooterComponent
+],
   template: `
+
   <header>
+  <app-navegacion></app-navegacion>
+  <div class="relleno"></div>
   <h1>Trabaja con nosotros</h1>
   <main>
   
@@ -125,6 +132,7 @@ import { error } from 'console';
     <img class="charles" src="trabaja-nosotros/charles.png" alt="">
   </main>
 </header>
+  <app-footer></app-footer>
 
   `,
   styleUrl: './trabaja-nosotros.component.css',

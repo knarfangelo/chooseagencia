@@ -1,6 +1,5 @@
 header{
   width: 100%;
-  min-height: 100vh;
   background-image: url('/trabaja-nosotros/fondo.png');
   background-size: cover;
   background-position: center;
@@ -13,6 +12,10 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: end;
+}
+.relleno{
+  width: 100%;
+  height: 130px;
 }
 .error {
   color: red;

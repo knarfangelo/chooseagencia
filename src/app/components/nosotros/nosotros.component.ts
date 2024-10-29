@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
   ],
   template: `
       <header>
-        <video autoplay muted loop src="fondo-movimiento.mp4"></video>
+        <video class="video-fondo" oncontextmenu="return false;" draggable="false" playsinline autoplay muted loop src="fondo-movimiento.mp4"></video>
         <h1>
         EXPERTOS EN 
         <span>

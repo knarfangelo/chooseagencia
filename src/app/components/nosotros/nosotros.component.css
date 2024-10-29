@@ -48,6 +48,18 @@ p{
   display: flex;
   width: 100%;
   height: 50vh;
+
+}
+.video-fondo{
+  
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+    object-fit: cover; /* Asegura que el video cubra su contenedor */
+    -webkit-user-drag: none;
 }
 
 a{

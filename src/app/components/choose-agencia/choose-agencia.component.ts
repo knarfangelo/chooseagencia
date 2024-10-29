@@ -36,7 +36,6 @@ import { VoiceflowComponentComponent } from "../VoiceflowComponent/VoiceflowComp
     <app-contactanos id="contactanos"></app-contactanos>
     <app-footer></app-footer> 
     <app-voiceflow-component></app-voiceflow-component>
-
   `,
   styleUrls: ['./choose-agencia.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

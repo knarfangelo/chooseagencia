@@ -57,7 +57,7 @@ export class InicioComponent {
   
     setTimeout(() => {
       this.anuncioStudio = false; // Ocultar el anuncio después de 10 segundos
-    }, 10000); 
+    }, 5000); 
     }
   }
   cerrarAnuncio() {

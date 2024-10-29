@@ -16,7 +16,8 @@ import { RouterLink } from '@angular/router';
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <header>
-    <video autoplay muted loop src="fondo-movimiento.mp4"></video>
+      <div class="encapsulador"></div>
+    <video class="video" oncontextmenu="return false;" draggable="false" playsinline autoplay muted loop src="fondo-movimiento.mp4"></video>
     <main>
           <button class="swiper-button-prev"> < </button>
         <swiper-container init=false class="swiper-servicios">
