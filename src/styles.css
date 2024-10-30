@@ -355,3 +355,24 @@
   [hidden] {
     display: none;
   }
+
+  /**
+  **/
+  .vfrc-widget--launcher {
+    position: fixed; /* Mantiene el componente en su lugar */
+    bottom: 20px; /* Ajusta según lo necesites */
+    right: 20px; /* Ajusta según lo necesites */
+    transition: transform 0.5s ease; /* Suaviza la animación */
+    animation: levitate 2s ease-in-out infinite; /* Aplicar la animación de levitación */
+  }
+  
+  /* Definición de la animación de levitación */
+  @keyframes levitate {
+    0%, 100% {
+      transform: translateY(0); /* Comienza en su posición original */
+    }
+    50% {
+      transform: translateY(-20px); /* Sube 10px en el punto medio de la animación */
+    }
+  }
+  
