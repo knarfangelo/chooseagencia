@@ -34,36 +34,4 @@
   <app-root>
   </app-root>
 </body>
-<script>
-  // Espera a que el documento esté completamente cargado
-document.addEventListener("DOMContentLoaded", function() {
-    const launcher = document.querySelector('.vfrc-widget--launcher');
-    let isSticking = false; // Estado para verificar si ya está pegado
-    let originalPosition = launcher.getBoundingClientRect().top; // Guarda la posición original
-    let offset = 0; // Variable para almacenar el offset actual
-
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.scrollY; // Posición actual del scroll
-
-        // Calcula el nuevo offset del launcher
-        offset = launcher.getBoundingClientRect().top;
-
-        // Si el scroll es mayor que la posición original, "pega" el launcher
-        if (scrollTop > originalPosition && !isSticking) {
-            launcher.style.position = 'fixed'; // Cambia a posición fija
-            launcher.style.top = '20px'; // Ajusta la distancia desde la parte superior
-            launcher.style.transition = 'transform 0.3s ease'; // Transición suave
-            launcher.style.transform = 'scale(1.1)'; // Escalar ligeramente
-            isSticking = true; // Actualiza el estado
-        }
-
-        // Si el scroll vuelve a la posición original, devuelve a su posición
-        if (scrollTop <= originalPosition && isSticking) {
-            launcher.style.position = 'absolute'; // Vuelve a posición absoluta
-            launcher.style.transform = 'scale(1)'; // Restablece la escala
-            isSticking = false; // Restablece el estado
-        }
-    });
-});
-</script>
 </html>

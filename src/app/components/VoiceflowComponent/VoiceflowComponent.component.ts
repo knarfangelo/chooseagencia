@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID, AfterViewInit,
     CommonModule,
   ],
   template: `
-    <div id="voiceflow-container" style="position: relative; height: 500px;"></div>
+    <div id="voiceflow-container"></div>
   `,
   styleUrls: ['./VoiceflowComponent.component.css'],
 })
@@ -16,7 +16,6 @@ export class VoiceflowComponentComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private renderer: Renderer2) {}
 
   ngAfterViewInit() {
-    if (isPlatformBrowser(this.platformId)) {
       const script = this.renderer.createElement('script');
       script.src = 'https://cdn.voiceflow.com/widget/bundle.mjs';
       script.type = 'text/javascript';
@@ -28,7 +27,7 @@ export class VoiceflowComponentComponent implements AfterViewInit {
           versionID: 'production',
           assistant: {
             stylesheet: 'styles.css'
-          }
+          },
         }).then(() => {
           // Limpiar mensajes anteriores
           (window as any).voiceflow.chat.proactive.clear();
@@ -43,6 +42,7 @@ export class VoiceflowComponentComponent implements AfterViewInit {
         });
       };
       this.renderer.appendChild(document.body, script);
-    }
-  }
+    }    
 }
+
+ 
