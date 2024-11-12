@@ -1,6 +1,5 @@
 import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
-import { NavegacionComponent } from "../navegacion/navegacion.component";
 import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.component";
 
 @Component({
@@ -8,7 +7,6 @@ import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.co
   standalone: true,
   imports: [
     CommonModule,
-    NavegacionComponent,
     MaquinaEscribirComponent,
 ],
   template: `
@@ -19,18 +17,7 @@ import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.co
     <div class="lupa" [hidden]="lupaHidden" [ngStyle]="{ left: lupaLeft + 'px', top: lupaTop + 'px' }">
       <img class="choose-zoom"   [ngStyle]="{ left: -lupaLeft + 'px', top: -lupaTop + 'px' }" src="background-choose-zoom.jpg" alt="fondo choose">
     </div> 
-    @if (anuncioStudio) {
-    <div class="anuncio">
-      <div class="info">
-      <div class="operacion">
-      <button (click)="cerrarAnuncio()" class="close"> X </button>
-      <h1 class="titulo-anuncio">CONOCE NUESTRO ESTUDIO</h1>
-      <a href="https://studio.chooseagencia.com/">Haz click aquí</a></div>
-      <img class="imagen-studio" src="anuncio-studio/anuncio-studio.png" alt="anuncio"></div>
-    </div>
-    } 
     <app-maquina-escribir></app-maquina-escribir>
-     
   </header>
 
   `,
@@ -53,15 +40,6 @@ export class InicioComponent {
   }
 
   ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-  
-    setTimeout(() => {
-      this.anuncioStudio = false; // Ocultar el anuncio después de 10 segundos
-    }, 5000); 
-    }
-  }
-  cerrarAnuncio() {
-    this.anuncioStudio = false;
   }
   actualizarPosicionLupa(event: MouseEvent) {
     this.lupaHidden = false;

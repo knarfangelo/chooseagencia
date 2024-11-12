@@ -9,6 +9,7 @@ import { ContactanosComponent } from "../contactanos/contactanos.component";
 import { FooterComponent } from "../footer/footer.component";
 import { LoadingComponent } from "../loading/loading.component";
 import { VoiceflowComponentComponent } from "../VoiceflowComponent/VoiceflowComponent.component";
+import { TraductorComponent } from "../traductor/traductor.component";
 
 @Component({
   selector: 'app-choose-agencia',
@@ -22,7 +23,8 @@ import { VoiceflowComponentComponent } from "../VoiceflowComponent/VoiceflowComp
     ContactanosComponent,
     FooterComponent,
     LoadingComponent,
-    VoiceflowComponentComponent
+    VoiceflowComponentComponent,
+    TraductorComponent
 ],
   template: `
     @if (loading) {
@@ -36,6 +38,7 @@ import { VoiceflowComponentComponent } from "../VoiceflowComponent/VoiceflowComp
     <app-contactanos id="contactanos"></app-contactanos>
     <app-footer></app-footer> 
     <app-voiceflow-component></app-voiceflow-component>
+    <app-traductor></app-traductor>
   `,
   styleUrls: ['./choose-agencia.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

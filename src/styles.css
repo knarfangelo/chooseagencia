@@ -29,6 +29,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    top: 0 !important;
     font-family:"Fredoka", sans-serif;
   }
   
@@ -375,4 +376,6 @@
       transform: translateY(-20px); /* Sube 10px en el punto medio de la animación */
     }
   }
-  
+  body > .skiptranslate {
+    display: none;
+  }

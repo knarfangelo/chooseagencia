@@ -1,5 +1,6 @@
 .nav{
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -49,3 +50,26 @@ ul li a:hover{
   background-color: #F7B521;
   color: #10132D;
 }
+
+@keyframes levitation {
+  0%, 100% {
+    transform: translateY(0); /* Posición inicial */
+  }
+  50% {
+    transform: translateY(-10px); /* Sube 10px */
+  }
+}
+
+.item-estudio {
+  background-color: #F7B521;
+  position: absolute;
+  right: 10px;
+  padding: 20px;
+  animation: levitation 3s ease-in-out infinite; /* Aplica la animación */
+}
+
+.item-estudio a {
+  color: #10132D;
+  font-weight: bold;
+}
+

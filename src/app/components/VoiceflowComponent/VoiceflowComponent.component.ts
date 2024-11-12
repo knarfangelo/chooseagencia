@@ -16,6 +16,7 @@ export class VoiceflowComponentComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private renderer: Renderer2) {}
 
   ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
       const script = this.renderer.createElement('script');
       script.src = 'https://cdn.voiceflow.com/widget/bundle.mjs';
       script.type = 'text/javascript';
@@ -28,21 +29,11 @@ export class VoiceflowComponentComponent implements AfterViewInit {
           assistant: {
             stylesheet: 'styles.css'
           },
-        }).then(() => {
-          // Limpiar mensajes anteriores
-          (window as any).voiceflow.chat.proactive.clear();
-
-          // Agregar mensajes proactivos
-          (window as any).voiceflow.chat.proactive.push(
-            { 
-              type: 'text', 
-              payload: { message: 'Hola, Soy el bot de Choose' } 
-            }, 
-          );
-        });
+        })
       };
       this.renderer.appendChild(document.body, script);
     }    
+  }
 }
 
  

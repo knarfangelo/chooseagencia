@@ -1,14 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { Router } from 'express';
 
 @Component({
   selector: 'app-social-listening',
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
   ],
   template: `
   <header>

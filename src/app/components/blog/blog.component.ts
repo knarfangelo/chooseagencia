@@ -1,20 +1,16 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { register, SwiperContainer } from 'swiper/element/bundle';
-import { IServicios } from '../servicios/serviciosDB/IServicios';
 import { SwiperOptions } from 'swiper/types';
 import { IBlog } from './blogDB/IBlog';
 import { blogJSON } from './blogDB/blogJSON';
-import { RouterLink } from '@angular/router';
-
 @Component({
   selector: 'app-blog',
   standalone: true,
-  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     CommonModule,
-    RouterLink
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <header>
       <h1 class="titulo">Nuestro Blog</h1>

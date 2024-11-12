@@ -16,11 +16,18 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#contactanos">Contacto</a></li>
-      <li><a href="https://studio.chooseagencia.com/">Estudio</a></li>
     </ul>
+    <div class="item-estudio">
+      <a href="https://studio.chooseagencia.com/">Estudio</a>
+
+    </div>
   </nav>
   `,
   styleUrl: './nav.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavComponent { }
+export class NavComponent {
+
+
+
+}
