@@ -8,7 +8,10 @@ import { ChangeDetectionStrategy, Component, Renderer2 } from '@angular/core';
     CommonModule,
   ],
   template: `
-      <div class="gtrans" id="google_translate_element"></div>
+  <div id="glt-translate-trigger" class="pressed"><span class="notranslate">Translate »</span>
+  <div class="gtrans" id="google_translate_element"></div>
+</div>
+      
   `,
   styleUrl:'./traductor.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

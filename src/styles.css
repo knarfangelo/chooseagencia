@@ -379,3 +379,17 @@
   body > .skiptranslate {
     display: none;
   }
+
+  
+  .goog-te-combo{
+    display: flex;
+    background-color:  #10132D !important;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 15px !important;
+  }
+  .skiptranslate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
