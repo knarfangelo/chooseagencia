@@ -1,6 +1,7 @@
 import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { MaquinaEscribirComponent } from "./maquina-escribir/maquina-escribir.component";
+import { WhatsappComponent } from "../whatsapp/whatsapp.component";
 
 @Component({
   selector: 'app-inicio',

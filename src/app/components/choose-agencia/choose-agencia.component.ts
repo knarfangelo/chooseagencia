@@ -10,6 +10,7 @@ import { FooterComponent } from "../footer/footer.component";
 import { LoadingComponent } from "../loading/loading.component";
 import { VoiceflowComponentComponent } from "../VoiceflowComponent/VoiceflowComponent.component";
 import { TraductorComponent } from "../traductor/traductor.component";
+import { WhatsappComponent } from "../whatsapp/whatsapp.component";
 
 @Component({
   selector: 'app-choose-agencia',
@@ -24,7 +25,8 @@ import { TraductorComponent } from "../traductor/traductor.component";
     FooterComponent,
     LoadingComponent,
     VoiceflowComponentComponent,
-    TraductorComponent
+    TraductorComponent,
+    WhatsappComponent
 ],
   template: `
     @if (loading) {
@@ -36,8 +38,9 @@ import { TraductorComponent } from "../traductor/traductor.component";
     <app-servicios id="servicios"></app-servicios>
     <app-blog id="blog"></app-blog>
     <app-contactanos id="contactanos"></app-contactanos>
-    <app-footer></app-footer> 
+    <app-footer></app-footer>
     <app-voiceflow-component></app-voiceflow-component>
+    <app-whatsapp></app-whatsapp>
     <app-traductor></app-traductor>
   `,
   styleUrls: ['./choose-agencia.component.css'],
@@ -46,6 +49,7 @@ import { TraductorComponent } from "../traductor/traductor.component";
 export class ChooseAgenciaComponent implements AfterViewChecked { 
 
   loading = true;
+  width = false;
   private botLoaded = false; // Indicador de carga
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
