@@ -48,3 +48,9 @@
     transform: scale(1);
   }
 }
+
+@media(width < 900px){
+  h1{
+    font-size: 10vw;
+  }
+}

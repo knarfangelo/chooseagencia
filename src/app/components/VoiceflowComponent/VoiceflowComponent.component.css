@@ -1,11 +1,4 @@
 #voiceflow-container {
-  position: fixed; /* O "absolute" dependiendo de tus necesidades */
-  bottom: 10px;
-  right: 10px;
-  width: 400px;
-  min-height: 80vh;
-  display: flex;
-  z-index: 1000; /* Ajusta según sea necesario */
 }
 .c-iLVmPU, .t-lisdam{
   height: 90vh;
