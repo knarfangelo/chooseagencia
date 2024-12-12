@@ -11,6 +11,7 @@ import { LoadingComponent } from "../loading/loading.component";
 import { VoiceflowComponentComponent } from "../VoiceflowComponent/VoiceflowComponent.component";
 import { TraductorComponent } from "../traductor/traductor.component";
 import { WhatsappComponent } from "../whatsapp/whatsapp.component";
+import { SociosEstrategicosComponent } from "../socios-estrategicos/socios-estrategicos.component";
 
 @Component({
   selector: 'app-choose-agencia',
@@ -26,7 +27,8 @@ import { WhatsappComponent } from "../whatsapp/whatsapp.component";
     LoadingComponent,
     VoiceflowComponentComponent,
     TraductorComponent,
-    WhatsappComponent
+    WhatsappComponent,
+    SociosEstrategicosComponent
 ],
   template: `
     @if (loading) {
@@ -37,6 +39,7 @@ import { WhatsappComponent } from "../whatsapp/whatsapp.component";
     <app-nosotros id="nosotros" ></app-nosotros>
     <app-servicios id="servicios"></app-servicios>
     <app-blog id="blog"></app-blog>
+    <app-socios-estrategicos></app-socios-estrategicos>
     <app-contactanos id="contactanos"></app-contactanos>
     <app-footer></app-footer>
     <app-voiceflow-component></app-voiceflow-component>
